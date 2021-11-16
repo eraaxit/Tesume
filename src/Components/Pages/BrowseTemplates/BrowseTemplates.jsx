@@ -1,9 +1,9 @@
 import "./BrowseTemplates.css"
-
+import T1 from "../../Templates/T1/T1";
 const BrowseTemplates = () => {
     return (
         <div>
-            Browse Templates
+            <T1 />
         </div>
     )
 }

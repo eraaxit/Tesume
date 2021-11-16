@@ -39,5 +39,28 @@ export const demoProfileData = {
             passout_year: "2006",
             grades: "8.8"
         }
+    ],
+    skills: [
+        {
+            skillName:"creative",
+            proficiency:"designer"
+        },
+        {
+            skillName:"leadership",
+            proficiency:"marketing"
+        }
+    ],
+    experience: [
+        {
+            title: "designer",
+            period: "3 years",
+            organization: "fine designer" 
+        },
+        {
+            title: "marketing",
+            period: "2 years",
+            organization: "western marketing service" 
+        }
     ]
+
 }

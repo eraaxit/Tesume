@@ -4,3 +4,6 @@ body {
   margin:0;
   font-family: 'Source Sans Pro', sans-serif;
 }
+a{
+  color:unset;
+}
