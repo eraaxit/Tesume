@@ -1,5 +1,6 @@
 import "./T1.css";
 import { demoProfileData } from "../../../Helpers";
+import EachEdu from "./components/EachEdu";
 
 const T1 = () => {
     return (
@@ -14,9 +15,14 @@ const T1 = () => {
                 <p>{demoProfileData.currentProfession}</p>
             </div> 
             <div className="education">
-                <h5><ion-icon name="book"></ion-icon>Education{demoProfileData.education[0].grades}</h5>
+                <h5><ion-icon name="book"></ion-icon>Education</h5>
                 <div className="add-more">
                 <ion-icon name="add"></ion-icon>
+                </div>
+                <div className="T1_edu_wrapper">
+                    {
+                        demoProfileData.education.map( each => <EachEdu {...{institution_name: each.institution_name, enroll_year: each.enroll_year}} />)
+                    }
                 </div>
             </div>
             <div className="skills">
