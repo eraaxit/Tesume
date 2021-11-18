@@ -48,8 +48,4 @@ git push -u orign <branch-name>
 ## Further Advancements
 
 - Connect the two sections with eachother intially with passing props.
-- Implement Redux to store the
 - New and freshier templates
-- Add customizability to the prebuilt templates
-- More formats user can download the templates in
-- Add more sections in the resume
