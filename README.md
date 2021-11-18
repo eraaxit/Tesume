@@ -37,7 +37,7 @@ After that you have made changes in code and tested all the things, just run bas
 ```
 git add .
 git commit -m "<give-a-meaningful-message>"
-git checkout -b <branch-name>
+git checkout -b "<branch-name>"
 #keep branch name accordingly to work you have done, so it would be easier to manage pull requests
 git push -u orign <branch-name>
 ```
