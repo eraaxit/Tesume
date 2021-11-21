@@ -11,7 +11,7 @@ const T1 = () => {
                 <div className="header">
                 </div>
                 <div className="profile_photo">
-                    <img src="https://www.bing.com/th?id=OIP.JWeoMXt9SFgHXs-vqGTiuAHaHa&w=200&h=148&c=7&qlt=90&bgcl=ececec&o=6&pid=PersonalBing" />
+                    <img src="https://www.bing.com/th?id=OIP.JWeoMXt9SFgHXs-vqGTiuAHaHa&w=200&h=148&c=7&qlt=90&bgcl=ececec&o=6&pid=PersonalBing" alt="dp" />
                 </div>
                 <div className="details">
                     <h1>{demoProfileData.name}</h1><br />
@@ -26,7 +26,7 @@ const T1 = () => {
                     </div>
                     <div className="T1_edu_wrapper">
                         {
-                            demoProfileData.education.map( each => <EachEdu {...{institution_name: each.institution_name, enroll_year: each.enroll_year,passout_year: each.passout_year,grades: each.grades}} />)
+                            demoProfileData.education.map( (each,i) => <EachEdu key={i} {...{institution_name: each.institution_name, enroll_year: each.enroll_year,passout_year: each.passout_year,grades: each.grades}} />)
                         }
                     </div>
                 </div>
@@ -39,7 +39,7 @@ const T1 = () => {
                     </div>
                     <div className="T1_skill_wrapper">
                         {
-                            demoProfileData.skills.map( each => <EachSkill {...{skillName: each.skillName,proficiency: each.proficiency}} />)
+                            demoProfileData.skills.map( (each,i) => <EachSkill key={i} {...{skillName: each.skillName,proficiency: each.proficiency}} />)
                         }
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const T1 = () => {
                     </div>
                     <div className="T1_exp_wrapper">
                         {
-                            demoProfileData.experience.map( each => <EachExperience {...{title: each.title, period: each.period,organization: each.organization}} />)
+                            demoProfileData.experience.map( (each,i) => <EachExperience key={i} {...{title: each.title, period: each.period,organization: each.organization}} />)
                         }
                     </div>
                 </div>
