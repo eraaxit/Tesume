@@ -13,4 +13,4 @@ const EachEdu = ({ institution_name, enroll_year, passout_year, grades }) => {
     )
 }
 
-export default EachEd
+export default EachEdu
