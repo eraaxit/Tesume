@@ -1,9 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap');
+
+:root {
+  --green: #6ACC80;
+  --white: rgb(220, 220, 220);
+  --blue: rgb(11, 80, 175);
+}
+* {
+  color: unset;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
 body {
   padding:0;
   margin:0;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
 a{
   color:unset;
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif !important;
 }
