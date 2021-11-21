@@ -42,22 +42,22 @@ export const demoProfileData = {
     ],
     skills: [
         {
-            skillName:"creative",
+            skillName:"Creative",
             proficiency:"designer"
         },
         {
-            skillName:"leadership",
+            skillName:"Leadership",
             proficiency:"marketing"
         }
     ],
     experience: [
         {
-            title: "designer",
+            title: "Designer",
             period: "3 years",
             organization: "fine designer" 
         },
         {
-            title: "marketing",
+            title: "Marketing",
             period: "2 years",
             organization: "western marketing service" 
         }
