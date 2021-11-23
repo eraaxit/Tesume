@@ -6,7 +6,7 @@ export const eachSkill = {
 export const eachEdu = {
     institution_name: "",
     enroll_year: "",
-    passout_year: "",
+    organization: "",
     grades: ""
 }
 
@@ -30,13 +30,13 @@ export const demoProfileData = {
         {
             institution_name: "HUIO Public School, Chennai",
             enroll_year: "1900",
-            passout_year: "2003",
+            organization: "2003",
             grades: "9.2"
         },
         {
             institution_name: "FRED University of Computer Science",
             enroll_year: "2003",
-            passout_year: "2006",
+            organization: "2006",
             grades: "8.8"
         }
     ],
@@ -62,5 +62,4 @@ export const demoProfileData = {
             organization: "western marketing service" 
         }
     ]
-
 }

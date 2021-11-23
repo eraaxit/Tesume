@@ -7,7 +7,7 @@ const Routes_ = () => {
         <div className="routes">
             <Routes>
                 <Route exact path="/" element={<FillData />} /> 
-                <Route exact path="/templates" element={<BrowseTemplates />} /> 
+                <Route exact path="/Templates" element={<BrowseTemplates />} /> 
             </Routes>
         </div>
     )
