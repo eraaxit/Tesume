@@ -2,7 +2,7 @@
 
 **Tesume - Resume Builder | Free Templates | Resume to pdf downloader**
 
-Tesume is a Open Source Product where the user can provide information about himself and his aptitudes by which he can choose one of the pre-built, professtionally-looking templates that he can download a PDF version of it directly.
+Tesume is a Open Source web app where users can provide information about themselves and their aptitudes after which they can choose one of the pre-built, professtionally-looking templates that he can download a PDF version of it directly.
 
 ## Aim
 
@@ -22,7 +22,6 @@ This application is basically taking input from the user about his personal deta
 
 - The fill data section is storing data in its state
 
-## Branch name Convention
 
 ## How to contribute ?
 
@@ -54,6 +53,15 @@ git add .
 
 git commit -m "<give-a-meaningful-message>"
 
+```
+
+**Note:** Please follow the convention for creating branches in git as follows
+
+```
+[typeofcontribution]/[suitable-name-for-contribution]
+```
+For example, if it's a bug, you can do : bugfix/bug-name
+```
 git checkout -b "<branch-name>"
 
 #keep branch name accordingly to work you have done, so it would be easier to manage pull requests
@@ -65,13 +73,6 @@ git push -u orign <branch-name>
 
 - Wait for the review of your pull request and you are all set to move further with it.
 
-**Note:** Please follow the convention for creating branches in git as follows
-
-```
-[typeofcontribution]/[suitable-name-for-contribution]
-```
-
-For example, if it's a new feature you can do - feature/feature-name, if it's an enhancement you can do - enhancement/improved-this, if it's an bug fix you can do - bugfix/fixed-bug-name and so on.
 
 ## Further Advancements
 
