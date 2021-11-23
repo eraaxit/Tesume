@@ -3,6 +3,7 @@ import TextField from "../../Input/TextField";
 import "./FillData.css";
 
 const FillData = () => {
+
     // const [ displayPicture, setDisplayPicture ] = useState("");
     const [ formData, setFormData ] = useState({
         name: "",

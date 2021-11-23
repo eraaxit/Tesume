@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Source+Sans+Pro&display=swap');
-
 *{
-    margin:0;
     padding:0;
+    margin:0;
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
-.T1{
+.T2{
     background-color: lightblue;
     display: flex;
     justify-content: center;
@@ -18,24 +16,33 @@
 .container{
     position: relative;
     width:100%;
-    max-width: 600px;
-    max-height: 1500px;
+    max-width: 1000px;
+    max-height: 1000px;
     background-color: #fff;
+    margin:50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
 }
-.container .header{
+.container .left_side{
     position: relative;
     background-color: #003147;
-    height:130px;
+    padding:40px;
+}
+.profile_details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .profile_photo{
     position:relative;
-    width:150px;
-    height:150px;
+    width:200px;
+    height:200px;
     border-radius: 50%;
     overflow:hidden;
-    margin-top: -80px;
-
 }
 .profile_photo img{
     position:absolute;
@@ -45,71 +52,86 @@
     height:100%;
     object-fit: cover;
 }
-.details{
-    margin-bottom: 20px;
-}
-.details h1{
+.profile_details h2{
     font-size: 1.5rem;
     margin-top: 20px;
+    color:#fff;
     text-transform:uppercase;
+    text-align: center;
     font-weight: 600;
     line-height:1.4rem;
 }
-.details p{
+.profile_details p{
     font-size:1.0rem;
     font-weight: 300;
+    color:white;
     line-height:0.1rem;
-    margin-bottom: 50px;
 }
 .links{
     padding-top: 40px;
 }
 .links ul{
-   display: grid;
-   grid-template-columns: repeat(5,1fr);
+    position:relative;
 }
 .links ul li{
+    position:relative;
     list-style:none;
-    cursor:pointer; 
+    margin:10px 0;
+    cursor:pointer;
 }
-.links ul li ion-icon{
-    width:35px;
-    font-size: 35px;
+.links ul li .icon{
+    display:inline-block;
+    width:30px;
+    font-size: 30px;
+    color:#03a9f4;
+    vertical-align: middle;
 }
-.education{
-    margin-bottom:20px ;
+.links ul li span{
+    color:#fff;
+    font-weight: 300;
 }
-.skills{
-    margin-bottom:20px ; 
+.links ul li .text{
+    padding-left: 20px;
+    font-size: 23px;
 }
-.T1_container{
+.container .right_side{
+    position: relative;
+    background-color: #fff;
+    padding:40px;
+}
+.right_side .education{
+    margin-bottom: 20px;
+}
+.right_side .skills{
+    margin-bottom: 20px;
+}
+.right_side .experience{
+    margin-bottom: 20px;
+}
+.T2_container{
     display:flex;
     justify-content: space-between;
 }
-.T1_container h5{
+.T2_container h5{
     color:#003147;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
     font-weight: bolder;
 }
-.T1_container ion-icon{
+.T2_container ion-icon{
     vertical-align: middle;
     padding-right: 5px;
 }
-.T1_container .add-more{
+.T2_container .add-more{
     font-size:23px;
 }
-.footer{
-    height:40px;
-    width: 100%;
-    background-color:#003147;
-}
-
 @media (max-width:1000px){
-    .links ul{
-        grid-template-columns: repeat(3,1fr);
+    .container{
+        margin:10px;
+        grid-template-columns: repeat(1,1fr);
     }
     
 }
+
 
