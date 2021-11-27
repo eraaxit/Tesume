@@ -1,0 +1,43 @@
+.wrapper {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  position: absolute;
+  left: 340px;
+  top: 10px;
+}
+.pic {
+  position: absolute;
+  border-radius: 100%;
+  top: 150px;
+  width: 200px;
+  right: 150px;
+  z-index: 10;
+  border: 5px solid white;
+}
+.name {
+  position: absolute;
+  top: 290px;
+  left: 190px;
+  z-index: 10;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.555);
+  padding: 1px;
+}
+.name h3 {
+  font-size: 15px;
+}
+.name h5 {
+  font-size: 10px;
+}
+
+.section {
+  position: absolute;
+  background-color: rgb(128, 99, 99);
+  height: 250px;
+  width: 250px;
+  border-top-left-radius: 100%;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  text-align: center;
+}
