@@ -6,42 +6,54 @@
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
-.T2{
-    background-color: lightblue;
+.T3{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-.container{
+.upper_part{
     position: relative;
     width:100%;
-    max-width: 1000px;
+    max-width: 700px;
     max-height: 1000px;
     background-color: #fff;
-    margin:50px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
 }
-.container .left_side{
+.container{
     position: relative;
+    width:100%;
+    max-width: 700px;
+    background-color: #fff;
+    margin:50px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
+}
+.lower_part{
+    position: relative;
+    width:100%;
+    max-width: 700px;
+    max-height: 1500px;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows:1fr 5fr;
+    box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
+}
+.container .left_side{
     background-color: #003147;
-    padding:40px;
+    position: relative;
 }
 .profile_details{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin-top: 60px;
+
 }
 .profile_photo{
     position:relative;
     width:200px;
     height:200px;
-    border-radius: 50%;
     overflow:hidden;
 }
 .profile_photo img{
@@ -53,37 +65,37 @@
     object-fit: cover;
 }
 .profile_details h2{
-    font-size: 1.5rem;
-    margin-top: 20px;
-    color:#fff;
+    font-size: 2.5rem;
     text-transform:uppercase;
     text-align: center;
     font-weight: 600;
     line-height:1.4rem;
+
 }
 .profile_details p{
-    font-size:1.0rem;
+    font-size:1.5rem;
     font-weight: 300;
-    color:white;
     line-height:0.1rem;
-}
-.links{
-    padding-top: 40px;
+    text-align: center;
 }
 .links ul{
     position:relative;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    justify-content: center;
 }
 .links ul li{
     position:relative;
     list-style:none;
-    margin:10px 0;
+    padding-top:50px;
     cursor:pointer;
+    text-align: center;
 }
 .links ul li .icon{
-    display:inline-block;
     width:30px;
-    font-size: 30px;
-    color:#03a9f4;
+    font-size: 40px;
+    color:white;
     vertical-align: middle;
 }
 .links ul li span{
@@ -108,28 +120,34 @@
 .right_side .experience{
     margin-bottom: 20px;
 }
-.T2_container{
+.T3_container{
     display:flex;
     justify-content: space-between;
 }
-.T2_container h5{
+.T3_container h5{
     color:#003147;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
     font-weight: bolder;
 }
-.T2_container ion-icon{
+.T3_container ion-icon{
     vertical-align: middle;
     padding-right: 5px;
 }
-.T2_container .add-more{
+.T3_container .add-more{
     font-size:23px;
 }
-@media (max-width:1000px){
-    .container{
-        margin:10px;
-        grid-template-columns: repeat(1,1fr);
+@media (max-width:700px){
+    .links ul {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .upper_part{
+        display: inline;
+        text-align: left;
+    }
+    .lower_part{
+        padding-top:20px;
     }
     
 }

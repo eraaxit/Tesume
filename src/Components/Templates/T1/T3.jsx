@@ -1,4 +1,4 @@
-import "./T3.css";
+import styles from "./T3.module.css";
 import { demoProfileData } from "../../../Helpers";
 import EachEdu from './components/EachEdu';
 import EachExperience from './components/EachExperience';
@@ -7,21 +7,21 @@ import EachSkill from './components/EachSkill';
 const T3 = () => {
     return(
 
-        <div className="T3">
-            <div className="container">
-                <div className="upper_part">
-                    <div className="profile_photo">
+        <div className={styles.T3}>
+            <div className={styles.container}>
+                <div className={styles.upper_part}>
+                    <div className={styles.profile_photo}>
                         <img src="https://www.bing.com/th?id=OIP.JWeoMXt9SFgHXs-vqGTiuAHaHa&w=200&h=148&c=7&qlt=90&bgcl=ececec&o=6&pid=PersonalBing" alt="dp" />
                     </div>
-                    <div className="profile_details">
+                    <div className={styles.profile_details}>
                         <h2>{demoProfileData.name}</h2><br />
                         <p>{demoProfileData.currentProfession}</p>
                     </div>
                 </div>
-                <div className="lower_part">
-                    <div className="left_side">
+                <div className={styles.lower_part}>
+                    <div className={styles.left_side}>
 
-                        <div className="links">
+                        <div className={styles.links}>
                             <ul>
                                 <li>
                                     <span className="icon"><a href={demoProfileData.socialLinks.linkedin}> <ion-icon name="logo-linkedin"></ion-icon> </a></span>
@@ -42,13 +42,10 @@ const T3 = () => {
                         </div>
                     </div>
 
-                    <div className="right_side">
-                        <div className="education">
-                            <div className="T3_container">
+                    <div className={styles.right_side}>
+                        <div className={styles.education}>
+                            <div className={styles.T3_container}>
                                 <h5><ion-icon name="book"></ion-icon>Education</h5>
-                                <div className="add-more">
-                                <ion-icon name="add"></ion-icon>
-                                </div>
                             </div>
                             <div className="T3_edu_wrapper">
                                 {
@@ -56,12 +53,9 @@ const T3 = () => {
                                 }
                             </div>
                         </div>
-                        <div className="skills">
-                            <div className="T3_container">
+                        <div className={styles.skills}>
+                            <div className={styles.T3_container}>
                                 <h5><ion-icon name="copy"></ion-icon>Skills</h5>
-                                <div className="add-more">
-                                <ion-icon name="add"></ion-icon>
-                                </div>
                             </div>
                             <div className="T3_skill_wrapper">
                                 {
@@ -69,12 +63,9 @@ const T3 = () => {
                                 }
                             </div>
                         </div>
-                        <div className="experience">
-                            <div className="T3_container">
+                        <div className={styles.experience}>
+                            <div className={styles.T3_container}>
                                 <h5><ion-icon name="laptop"></ion-icon>Experience</h5>
-                                <div className="add-more">
-                                <ion-icon name="add"></ion-icon>
-                                </div>
                             </div>
                             <div className="T3_exp_wrapper">
                                 {

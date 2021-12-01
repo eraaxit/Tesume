@@ -7,7 +7,6 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 .T1{
-    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +19,7 @@
     max-height: 1500px;
     background-color: #fff;
     box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
+    padding:10px;
 }
 .container .header{
     position: relative;
@@ -69,6 +69,7 @@
 .links ul li{
     list-style:none;
     cursor:pointer; 
+    text-align: center;
 }
 .links ul li ion-icon{
     width:35px;
@@ -105,8 +106,8 @@
 }
 
 @media (max-width:1000px){
-    .links ul{
-        grid-template-columns: repeat(3,1fr);
+    .T1{
+        transform:scale(0.4);
     }
     
 }
