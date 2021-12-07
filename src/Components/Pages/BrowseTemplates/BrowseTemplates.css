@@ -1,8 +1,11 @@
 .all_templates{
     display:grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     background-color: lightblue ;
 }
 .all_templates>div{
     min-width: 600px;
+}
+.arrow ion-icon{
+    font-size: 60px;
 }
