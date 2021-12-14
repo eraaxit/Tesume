@@ -14,8 +14,7 @@
 }
 .upper_part{
     position: relative;
-    width:100%;
-    max-width: 700px;
+    width: 600px;
     max-height: 1000px;
     background-color: #fff;
     display: grid;
@@ -24,8 +23,6 @@
 }
 .container{
     position: relative;
-    width:100%;
-    max-width: 700px;
     background-color: #fff;
     margin:50px;
     display: grid;
@@ -138,16 +135,9 @@
 .T3_container .add-more{
     font-size:23px;
 }
-@media (max-width:700px){
-    .links ul {
-        grid-template-columns: repeat(3,1fr);
-    }
-    .upper_part{
-        display: inline;
-        text-align: left;
-    }
-    .lower_part{
-        padding-top:20px;
+@media (max-width:900px){
+    .T3{
+        transform:scale(0.4);
     }
     
 }

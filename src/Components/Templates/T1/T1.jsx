@@ -1,8 +1,8 @@
 import styles from "./T1.module.css";
 import { demoProfileData } from "../../../Helpers";
-import EachEdu from './components/EachEdu';
-import EachExperience from './components/EachExperience';
-import EachSkill from './components/EachSkill';
+import EachEdu from '../components/EachEdu';
+import EachExperience from '../components/EachExperience';
+import EachSkill from '../components/EachSkill';
 
 const T1 = () => {
     return (
@@ -21,7 +21,7 @@ const T1 = () => {
                     <div className={styles.T1_container}>
                         <h5><ion-icon name="book"></ion-icon>Education</h5>
                     </div>
-                    <div className="T1_edu_wrapper">
+                    <div className={styles.T1_edu_wrapper}>
                         {
                             demoProfileData.education.map( (each,i) => <EachEdu key={i} {...{institution_name: each.institution_name, enroll_year: each.enroll_year,passout_year: each.passout_year,grades: each.grades}} />)
                         }
@@ -31,7 +31,7 @@ const T1 = () => {
                     <div className={styles.T1_container}>
                         <h5><ion-icon name="copy"></ion-icon>Skills</h5>
                     </div>
-                    <div className="T1_skill_wrapper">
+                    <div className={styles.T1_skill_wrapper}>
                         {
                             demoProfileData.skills.map( (each,i) => <EachSkill key={i} {...{skillName: each.skillName,proficiency: each.proficiency}} />)
                         }
@@ -41,7 +41,7 @@ const T1 = () => {
                     <div className={styles.T1_container}>
                         <h5><ion-icon name="laptop"></ion-icon>Experience</h5>
                     </div>
-                    <div className="T1_exp_wrapper">
+                    <div className={styles.T1_exp_wrapper}>
                         {
                             demoProfileData.experience.map( (each,i) => <EachExperience key={i} {...{title: each.title, period: each.period,organization: each.organization}} />)
                         }
