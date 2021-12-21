@@ -110,3 +110,8 @@
     
 }
 
+@media (max-width: 1000px) {
+  .links ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
