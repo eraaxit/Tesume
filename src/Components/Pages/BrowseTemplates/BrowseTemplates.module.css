@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(173, 189, 194) ;
+    overflow: hidden;
+
+}
+input{
+    border: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+}
+.all_templates{
+    display:grid;
+    grid-template-columns: 350px 350px 350px;
+    height: 80%;
+    position: relative;
+    top:-20vh;
+    left:-120px;
+}
+.all_templates>div{
+    min-width: 600px;
+    transform: scale(0.55);
+}
+.arrow ion-icon{
+    position: absolute;
+    top:45%;
+    left:95%;
+    font-size: 60px;
+    color: #003147;
+}
+.template_info{
+    position: relative;
+    width:400px;
+    background-color: #003147;
+    overflow-y: scroll;
+    height:100vh;
+    z-index: 10;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(122, 119, 119);
+    border-radius: 6px;
+  }
+
+
+.each_info{
+background-color: transparent;
+color:white;
+width: 100%;
+margin-bottom: 20px;
+padding: 20px;
+}
+.personal{
+    margin-top: 40px;
+    padding-left:40px;
+}
+input{
+    float:right;
+padding-left:10px;
+padding-right: 10px;
+border-radius: 5px;
+outline: none;
+}
+
+
+
+
