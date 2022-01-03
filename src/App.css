@@ -32,3 +32,6 @@ a{
 .roboto {
   font-family: 'Roboto', sans-serif !important;
 }
+body {
+  background-color: rgb(173, 189, 194);
+}

@@ -1,16 +1,12 @@
-import { useState } from "react";
+
 import styles from "./FillDataStyles.module.css";
 
-const Experience = () => {
-  const [Experiences, setExperiences] = useState([
-    {
-      title: "",
-      period: "",
-      organization: ""
-    },
-  ]);
+const Experience = (props) => {
+
+  const {experiences,setExperiences} = props
+  
   const onChangeText = (e, i) => {
-    let newArr = [...Experiences];
+    let newArr = [...experiences];
     newArr[i][e.target.name] = e.target.value;
     setExperiences(newArr);
   };
@@ -22,7 +18,7 @@ const Experience = () => {
         className={styles.plus}
         onClick={() =>
           setExperiences([
-            ...Experiences,
+            ...experiences,
             {
               title: "",
               period: "",
@@ -34,7 +30,7 @@ const Experience = () => {
       >
         +
       </div>
-      {Experiences.map((eachExperience, i) => (
+      {experiences.map((eachExperience, i) => (
         <div key={i} className={styles.moreInfo}>
           <input
             type="text"

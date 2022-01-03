@@ -3,9 +3,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
-  input:focus {
-    outline: none;
-  }
+  
   .container {
     height: auto;
     max-width: 60vw;
@@ -84,8 +82,8 @@
     background-color: white;
   }
   .balls {
-    height: 28px;
-    width: 27px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     padding: 5.0px 5.3px;
     display: inline-block;
@@ -137,7 +135,7 @@
     height: auto;
     width: 65%;
     margin: 10px auto 30px auto;
-    background-color: white;
+    background-color: transparent;
   }
   .addBox input:nth-last-child(1){
     margin-bottom: 20px;
@@ -191,7 +189,24 @@
     font: inherit;
     font-family: Arial, Helvetica, sans-serif;
   }  
-
+  .btn{
+    height:35px;
+    width:80px;
+    margin-bottom: 10px;
+    background-color:rgb(42, 133, 185); 
+    color: lightgray;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 45%;
+    transition: 0.4s;
+  }
+  .btn:hover{
+    background-color: lightgray;
+    color: rgb(42, 133, 185);
+  }
 
   /* media queries */
   @media only screen and (max-width:1200px){

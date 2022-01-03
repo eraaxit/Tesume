@@ -1,15 +1,10 @@
-import { useState } from "react";
+
 import styles from "./FillDataStyles.module.css";
 
-const Education = () => {
-  const [educations, setEducations] = useState([
-    {
-      institution_name: "",
-      enroll_year: "",
-      passout_year: "",
-      grades: "",
-    },
-  ]);
+const Education = (props) => {
+  
+  const {educations,setEducations} = props
+
   const onChangeText = (e, i) => {
     let newArr = [...educations];
     newArr[i][e.target.name] = e.target.value;
@@ -46,7 +41,7 @@ const Education = () => {
           />
           <br />
           <input
-            type="text"
+            type="number"
             name="enroll_year"
             value={eachEducation.enroll_year}
             onChange={(e) => onChangeText(e, i)}
@@ -54,7 +49,7 @@ const Education = () => {
           />
                     <br />
           <input
-            type="text"
+            type="number"
             name="passout_year"
             value={eachEducation.passout_year}
             onChange={(e) => onChangeText(e, i)}

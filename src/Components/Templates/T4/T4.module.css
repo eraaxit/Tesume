@@ -40,6 +40,7 @@
     display: grid;
     grid-template-columns:1fr 2fr;
     box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
+    top:-50px
 }
 .container .left_side{
     background-color: #003147;
@@ -56,6 +57,7 @@
     width:200px;
     height:200px;
     overflow:hidden;
+    margin-left: 20px;
 }
 .profile_photo img{
     position:absolute;

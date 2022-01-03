@@ -1,13 +1,10 @@
-import { useState } from "react";
+
 import styles from "./FillDataStyles.module.css";
 
-const Skills = () => {
-  const [skills, setSkills] = useState([
-    {
-      skillName: "",
-      proficiency: "",
-    },
-  ]);
+const Skills = (props) => {
+
+  const {skills,setSkills} = props
+  
   const onChangeText = (e, i) => {
     let newArr = [...skills];
     newArr[i][e.target.name] = e.target.value;
