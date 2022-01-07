@@ -1,9 +1,7 @@
-
-import styles from "./FillDataStyles.module.css";
+import styles from "./FillDataComponents.module.css";
 
 const Education = (props) => {
-  
-  const {educations,setEducations} = props
+  const { educations, setEducations } = props;
 
   const onChangeText = (e, i) => {
     let newArr = [...educations];
@@ -11,25 +9,17 @@ const Education = (props) => {
     setEducations(newArr);
   };
 
+  const handleremove = (i) => {
+    const shortarr = educations
+      .slice(0, i)
+      .concat(educations.slice(i + 1, educations.length));
+    setEducations(shortarr);
+  };
+
   return (
     <div className={styles.addBox}>
-    <h3 className={styles.heading}>Education</h3>
-      <div
-        className={styles.plus}
-        onClick={() =>
-          setEducations([
-            ...educations,
-            {
-              institution_name: "",
-              enroll_year: "",
-              passout_year: "",
-              grades: "",
-            },
-          ])
-        }
-      >
-        +
-      </div>
+      <h3 className={styles.heading}>Education</h3>
+
       {educations.map((eachEducation, i) => (
         <div key={i} className={styles.moreInfo}>
           <input
@@ -39,23 +29,23 @@ const Education = (props) => {
             onChange={(e) => onChangeText(e, i)}
             placeholder="Institution Name"
           />
-          <br />
+          <br /> 
           <input
-            type="number"
+            type="text"
             name="enroll_year"
             value={eachEducation.enroll_year}
             onChange={(e) => onChangeText(e, i)}
             placeholder="Enroll Year"
           />
-                    <br />
+          <br />
           <input
-            type="number"
+            type="text"
             name="passout_year"
             value={eachEducation.passout_year}
             onChange={(e) => onChangeText(e, i)}
             placeholder="Passout Year"
           />
-                    <br />
+          <br />
           <input
             type="text"
             name="grades"
@@ -63,6 +53,28 @@ const Education = (props) => {
             onChange={(e) => onChangeText(e, i)}
             placeholder="Grades"
           />
+          {i === 0 ? (
+            <div
+              className={styles.plus}
+              onClick={() =>
+                setEducations([
+                  ...educations,
+                  {
+                    institution_name: "",
+                    enroll_year: "",
+                    passout_year: "",
+                    grades: "",
+                  },
+                ])
+              }
+            >
+              +
+            </div>
+          ) : (
+            <div className={styles.plus} onClick={() => handleremove(i)}>
+              -
+            </div>
+          )}
         </div>
       ))}
     </div>

@@ -76,7 +76,7 @@ const FillData = (props) => {
     setFormData({
       ...formData,
       socialLinks: {
-        ...formData.socialLinks,
+        ...formData.socialLinks,              
         [name]: value,
       },
     });

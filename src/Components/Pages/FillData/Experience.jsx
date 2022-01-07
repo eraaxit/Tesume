@@ -1,5 +1,5 @@
 
-import styles from "./FillDataStyles.module.css";
+import styles from "./FillDataComponents.module.css";
 
 const Experience = (props) => {
 
@@ -11,25 +11,16 @@ const Experience = (props) => {
     setExperiences(newArr);
   };
 
+  const handleremove = (i) => {
+    const shortarr = experiences
+      .slice(0, i)
+      .concat(experiences.slice(i + 1, experiences.length));
+    setExperiences(shortarr);
+  };
+
   return (
     <div className={styles.addBox}>
     <h3 className={styles.heading}>Experience</h3>
-      <div
-        className={styles.plus}
-        onClick={() =>
-          setExperiences([
-            ...experiences,
-            {
-              title: "",
-              period: "",
-              organization: "",
-              grades: "",
-            },
-          ])
-        }
-      >
-        +
-      </div>
       {experiences.map((eachExperience, i) => (
         <div key={i} className={styles.moreInfo}>
           <input
@@ -55,8 +46,31 @@ const Experience = (props) => {
             onChange={(e) => onChangeText(e, i)}
             placeholder="Organisation"
           />
+          {i === 0 ? (
+            <div
+              className={styles.plus}
+              onClick={() =>
+                setExperiences([
+                  ...experiences,
+                  {
+                    institution_name: "",
+                    enroll_year: "",
+                    passout_year: "",
+                    grades: "",
+                  },
+                ])
+              }
+            >
+              +
+            </div>
+          ) : (
+            <div className={styles.plus} onClick={() => handleremove(i)}>
+              -
+            </div>
+          )}
         </div>
       ))}
+      
     </div>
   );
 };
