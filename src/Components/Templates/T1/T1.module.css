@@ -1,117 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Source+Sans+Pro&display=swap');
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Nunito Sans', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Source+Sans+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
-.T1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.T1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container{
-    position: relative;
-    width: 600px;
-    height: 1000px;
-    background-color: #fff;
-    box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
-    padding:10px;
+.container {
+  width: 600px;
+  min-height: 1000px;
+  background-color: #fff;
+  box-shadow: 0px 35px 55px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
-.container .header{
-    position: relative;
-    background-color: #003147;
-    height:130px;
+.container .header {
+  background-color: #003147;
+  height: 130px;
 }
-.profile_photo{
-    position:relative;
-    width:150px;
-    height:150px;
-    border-radius: 50%;
-    overflow:hidden;
-    margin-top: -80px;
-
+.body{
+    min-height: 850px;
 }
-.profile_photo img{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit: cover;
+.profile_photo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -80px;
 }
-.details{
-    margin-bottom: 20px;
+.profile_photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.details h1{
-    font-size: 1.5rem;
-    margin-top: 20px;
-    text-transform:uppercase;
-    font-weight: 600;
-    line-height:1.4rem;
+.details {
+  margin-bottom: 20px;
 }
-.details p{
-    font-size:1.0rem;
-    font-weight: 300;
-    line-height:0.1rem;
-    margin-bottom: 50px;
+.details h1 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.4rem;
 }
-.links{
-    padding-top: 40px;
+.details p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 0.1rem;
+  margin-bottom: 50px;
 }
-.links ul{
-   display: grid;
-   grid-template-columns: repeat(5,1fr);
+.links {
+  padding-top: 40px;
+  position: relative;
 }
-.links ul li{
-    list-style:none;
-    cursor:pointer; 
-    text-align: center;
+.links ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
-.links ul li ion-icon{
-    width:35px;
-    font-size: 35px;
+.links ul li {
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
 }
-.education{
-    margin-bottom:20px ;
+.links ul li ion-icon {
+  width: 35px;
+  font-size: 35px;
 }
-.skills{
-    margin-bottom:20px ; 
+.education {
+  margin-bottom: 20px;
 }
-.T1_container{
-    display:flex;
-    justify-content: space-between;
+.skills {
+  margin-bottom: 20px;
 }
-.T1_container h5{
-    color:#003147;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    font-weight: bolder;
+.T1_container {
+  display: flex;
+  justify-content: space-between;
 }
-.T1_container ion-icon{
-    vertical-align: middle;
-    padding-right: 5px;
+.T1_container h5 {
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: bolder;
 }
-.T1_container .add-more{
-    font-size:23px;
+.T1_container ion-icon {
+  vertical-align: middle;
+  padding-right: 5px;
 }
-.footer{
-    height:40px;
-    width: 100%;
-    background-color:#003147;
+.T1_container .add-more {
+  font-size: 23px;
 }
-
-@media (max-width:900px){
-    .T1{
-        transform:scale(0.4);
-    }
-    
+.footer {
+  height: 60px;
+  background-color: #003147;
 }
 
-@media (max-width: 1000px) {
-  .links ul {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 900px) {
+  .T1 {
+    transform: scale(0.4);
   }
 }

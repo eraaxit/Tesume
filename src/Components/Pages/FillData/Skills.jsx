@@ -1,36 +1,26 @@
-import { useState } from "react";
-import styles from "./FillDataStyles.module.css";
 
-const Skills = () => {
-  const [skills, setSkills] = useState([
-    {
-      skillName: "",
-      proficiency: "",
-    },
-  ]);
+import styles from "./FillDataComponents.module.css";
+
+const Skills = (props) => {
+
+  const {skills,setSkills} = props
+  
   const onChangeText = (e, i) => {
     let newArr = [...skills];
     newArr[i][e.target.name] = e.target.value;
     setSkills(newArr);
   };
 
+  const handleremove = (i) => {
+    const shortarr = skills
+      .slice(0, i)
+      .concat(skills.slice(i + 1, skills.length));
+    setSkills(shortarr);
+  };
+
   return (
     <div className={styles.addBox}>
     <h3 className={styles.heading}>Skills</h3>
-      <div
-        className={styles.plus}
-        onClick={() =>
-          setSkills([
-            ...skills,
-            {
-              skillName: "",
-              proficiency: "",
-            },
-          ])
-        }
-      >
-        +
-      </div>
       {skills.map((eachSkills, i) => (
         <div key={i} className={styles.moreInfo}>
           <input
@@ -48,8 +38,31 @@ const Skills = () => {
             onChange={(e) => onChangeText(e, i)}
             placeholder="Proficiency"
           />
+          {i === 0 ? (
+            <div
+              className={styles.plus}
+              onClick={() =>
+                setSkills([
+                  ...skills,
+                  {
+                    institution_name: "",
+                    enroll_year: "",
+                    passout_year: "",
+                    grades: "",
+                  },
+                ])
+              }
+            >
+              +
+            </div>
+          ) : (
+            <div className={styles.plus} onClick={() => handleremove(i)}>
+              -
+            </div>
+          )}
         </div>
       ))}
+      
     </div>
   );
 };

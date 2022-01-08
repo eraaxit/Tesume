@@ -2,14 +2,17 @@ import './App.css';
 import React from 'react';
 import Routes from './Components/Pages/Routes';
 import { BrowserRouter } from 'react-router-dom';
+import FormState from './Components/Context/FormState';
 
 const App = () => {
   return (
-    <BrowserRouter>
-    <div className="App">
-      <Routes />
-    </div>
-    </BrowserRouter>
+    <FormState>
+      <BrowserRouter>
+      <div className="App">
+        <Routes />
+      </div>
+      </BrowserRouter>
+    </FormState>
   )
 }
 

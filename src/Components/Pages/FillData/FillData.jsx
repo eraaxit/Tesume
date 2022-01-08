@@ -1,30 +1,23 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useRef } from "react";
 import styles from "./FillDataStyles.module.css";
 import Education from "./Education";
 import Experience from "./Experience";
 import Skills from "./Skills";
+import FormContext from "../../Context/FormContext";
+import Alertbox from "./Alertbox";
+import {useNavigate} from "react-router-dom"
 
+const FillData = (props) => {
 
+  let navigate = useNavigate();
+  const formContext = useContext(FormContext);
+  const { addData} = formContext;
 
-const FillData = () => {
-   // const [ displayPicture, setDisplayPicture ] = useState("");
-    const [ formData, setFormData ] = useState({
-        name: "",
-        currentProfession: "",
-        socialLinks: {
-            linkedin: "",
-            github: "",
-            phone: "",
-            website: "",
-            email: ""
-        },
-        education: [],
-        skills: [],
-        experience: [],
-    })
-
+  const [displayPicture, setDisplayPicture] = useState("https://www.w3schools.com/howto/img_avatar.png");
+  
   const inputRef = useRef("https://www.w3schools.com/howto/img_avatar.png");
+  
   const [formData, setFormData] = useState({
     name: "",
     currentProfession: "",
@@ -34,8 +27,34 @@ const FillData = () => {
       phone: "",
       website: "",
       email: "",
-    }
+    },
   });
+
+  const [educations, setEducations] = useState([
+    {
+      institution_name: "",
+      enroll_year: "",
+      passout_year: "",
+      grades: "",
+    },
+  ]);
+
+  const [experiences, setExperiences] = useState([
+    {
+      title: "",
+      period: "",
+      organization: ""
+    },
+  ]);
+
+  const [skills, setSkills] = useState([
+    {
+      skillName: "",
+      proficiency: "",
+    },
+  ]);
+
+  const [openModal,setOpenModal] = useState(false);
 
   const selectImage = (e) => {
     const reader = new FileReader();
@@ -55,14 +74,38 @@ const FillData = () => {
   const changeIcon = (e) => {
     const { name, value } = e.target;
     setFormData({
-      ...formData,socialLinks:{
-     ...formData.socialLinks,[name]: value,
-      }
+      ...formData,
+      socialLinks: {
+        ...formData.socialLinks,              
+        [name]: value,
+      },
     });
+  };
+  
+
+  const nextFunction = () => {
+      if(formData.name==="" || formData.currentProfession==="" || educations[0].institution_name==="" || educations[0].enroll_year==="" || educations[0].passout_year==="" || educations[0].grades==="" || skills[0].skillName==="" || skills[0].proficiency===""){
+      setOpenModal(true);
+      return;
+    }
+    addData({
+      name: formData.name,
+      currentProfession: formData.currentProfession,
+      socialLinks:formData.socialLinks,
+      displayPicture:displayPicture,
+      educations:educations,
+      experiences:experiences,
+      skills:skills
+      }
+    );
+    navigate("/templates")
+    
   };
 
   return (
+    
     <div className={styles.container}>
+      { openModal && <Alertbox closeModal={setOpenModal} />}
       <div className={styles.image} onClick={() => inputRef.current.click()}>
         <div
           className={styles.imageHolder}
@@ -157,13 +200,12 @@ const FillData = () => {
             </span>
           </i>
         </div>
-      </div>   
-      <Education></Education>
-      <Experience></Experience>
-      <Skills></Skills>
-      
-</div>
-
+      </div>
+      <Education educations={educations} setEducations={setEducations}></Education>
+      <Experience experiences={experiences} setExperiences={setExperiences}></Experience>
+      <Skills skills={skills} setSkills={setSkills}></Skills>
+      <button onClick={nextFunction} className={styles.btn}>Next</button>
+    </div>
   );
 };
 export default FillData;
