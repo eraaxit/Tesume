@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .container {
+    height: auto;
+    max-width: 60vw;
+    background-color: white;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 7px 8px 10px 0 rgba(0, 0, 0, 0.2),
+      5px 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .image {
+    height: auto;
+    min-width: 15vw;
+    background-color: white;
+    margin: 15px auto;
+  }
+  .imageHolder {
+    height: 15vw;
+    max-width: 15vw;
+    border-radius: 50%;
+    background-size: contain;
+  }
+  .imageHolder:hover {
+    opacity: 0.6;
+  }
+  .takeImage {
+    height: 15vw;
+    max-width: 15vw;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    opacity: 0;
+  }
+  .imageHolder:hover .takeImage {
+    opacity: 0.6;
+    transition-duration: 0.5s ease;
+    cursor: pointer;
+  }
+  .image input {
+    display: none;
+  }
+  .takeImage i {
+    color: black;
+    font-size: 30px;
+    background-color: transparent;
+  }
+  .textFields {
+    height: auto;
+    width: 65%;
+    margin: 15px auto;
+    background-color: white;
+  }
+  .textFields input {
+    height: auto;
+    width: 100%;
+    font-size: larger;
+    padding: 8px;
+    margin: 8px;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .textBalls {
+    height: 40px;
+    width: 65%;
+    margin: 15px auto;
+    padding: 0px 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+  }
+  .balls {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    padding: 5.0px 5.3px;
+    display: inline-block;
+    background-color: transparent;
+    font-size: 27px;
+    color: rgb(42, 133, 185);
+  }
+  .balls:hover {
+    background-color: rgb(221, 215, 215);
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  .balls i {
+    height: 0px;
+    width: 0px;
+  }
+  .toolTip {
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(221, 215, 215);
+    font-size: small;
+    display: inline-block;
+    position: relative;
+    top: -69px;
+    visibility: hidden;
+  }
+  .toolTip input {
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: rgb(221, 215, 215);
+    color: grey;
+  }
+  .balls:hover .toolTip {
+    visibility: visible;
+  }
+  .toolTip::before {
+    content: "";
+    position: relative;
+    top: 93%;
+    left: 7%;
+    border: 8px solid;
+    border-color: rgb(221, 215, 215) transparent transparent transparent;
+  }
+  
+  .btn{
+    height:35px;
+    width:80px;
+    margin-bottom: 10px;
+    background-color:rgb(42, 133, 185); 
+    color: lightgray;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 45%;
+    transition: 0.4s;
+  }
+  .btn:hover{
+    background-color: lightgray;
+    color: rgb(42, 133, 185);
+  }
+
+  /* media queries */
+  @media only screen and (max-width:1200px){
+    .takeImage {
+font-size: 25px;
+    }
+  .textFields input {
+    font-size: larger;
+  }
+  .balls {
+    font-size: 33px;
+  }
+
+
+  }
+ @media only screen and (max-width:950px){
+    .takeImage {
+font-size: 23px;
+    }
+    .textFields input {
+      font-size: larger;
+    }
+  .balls {
+    font-size: 25px;
+
+  }
+  }
+  @media only screen and (max-width:700px){
+    .takeImage {
+font-size: 15px;
+    }
+    .textFields input {
+      font-size: small;
+    }
+  .balls {
+    font-size: 18px;
+  }
+  .plus{
+    background-color:rgb(104, 168, 206);
+    margin: 15px auto 15px;
+    color: white;
+  }
+  } 
+
+
+  

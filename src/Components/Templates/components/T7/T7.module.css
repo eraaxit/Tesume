@@ -1,0 +1,87 @@
+.container{
+    height:100vh;
+    width: 100vw;
+}
+.innerContainer{
+    height: 100vh;
+    width:70vw;
+    background-color: white;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40% 1% 59%;
+}
+.col1{
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.col2{
+    height: 100vh;
+    width:50%;
+    background-color:  #003147;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.col3{
+    height: 100vh;
+    width: 90%;
+    /* background-color: blueviolet; */
+    margin: auto;
+
+}
+.profile_photo{
+    height: 180px;
+    width: 180px;
+    border-radius:50%;
+    background-size: contain;
+    margin:20px auto;
+}
+.profile_photo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.profile_info{
+    height: auto;
+    width: auto;
+    margin:5px auto;
+    font-size: 20px;
+    color:#003147 ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.profile_info p{
+    text-align: center;
+    margin:5px 0px;
+}
+.balls{
+    height:20px;
+    width: 20px;
+    background-color: #003147;
+    border-radius:50% ;
+    margin:0px -8px;
+}
+.balls:nth-child(4){
+    margin-top:120px;
+    margin-bottom: 20px;
+}
+.links {
+    padding-top: 40px;
+    position: relative;
+  }
+  .links ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .links ul li {
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  .links ul li ion-icon {
+    width: 35px;
+    font-size: 35px;
+  }
+  

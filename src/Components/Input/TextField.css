@@ -1,6 +1,7 @@
 .input_wrapper{
     position: relative;
     padding: 8px 0px;
+    margin:10px;
 }
 .input_wrapper>input{
     width: 100%;
@@ -10,9 +11,10 @@
     transition: 0.4s;
     color: rgb(42, 42, 42);
     letter-spacing: 1px;
+    background-color: transparent;
 }
 .input_wrapper>label{
     transition: 0.4s;
-    font-size: 12px;
+    font-size: 14px;
     position: absolute;
 }
