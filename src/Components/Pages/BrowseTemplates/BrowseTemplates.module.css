@@ -5,7 +5,7 @@
 }
 .container {
   display: grid;
-  grid-template-columns: 30vw 15vw 15vw 15vw;
+  grid-template-columns: 30vw 15vw 15vw 15vw ;
   height: 100vh;
   width: 100vw;
 }
@@ -35,6 +35,7 @@
 }
 
 .all_templates {
+
   display: flex;
   margin:60px 20px;
   height: 100px;
@@ -52,14 +53,26 @@
 }
 
 
-.arrow ion-icon {
+.rightarrow ion-icon {
   position: absolute;
   top:45vh ;
   left:95%;
   font-size: 60px;
   color: #003147;
 }
-.arrow:hover{
+.rightarrow:hover{
+  cursor: pointer;
+}
+
+.leftarrow ion-icon {
+  position: absolute;
+  top:45vh ;
+  font-size: 60px;
+  color: #003147;
+  
+  z-index:1;
+}
+.lefttarrow:hover{
   cursor: pointer;
 }
 

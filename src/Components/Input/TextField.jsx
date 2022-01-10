@@ -17,10 +17,15 @@ const TextField = (props) => {
   };
 
   const modifyLabelPosition = (type) => {
-    if (val)
-      return setLabelStyles({ bottom: "45px", opacity: 0.9, color: "grey" });
-    if (type === "focusIn")
-      return setLabelStyles({ bottom: "45px", opacity: 0.9, color: "grey" });
+    if (val){
+      if(window.innerWidth<800)
+      return setLabelStyles({ bottom: "30px", opacity: 0.9, color: "grey" });
+    return setLabelStyles({ bottom: "45px", opacity: 0.9, color: "grey" })
+    }
+    if (type === "focusIn"){
+      if(window.innerWidth<800)
+        return setLabelStyles({ bottom: "30px", opacity: 0.9, color: "grey" });
+      return setLabelStyles({ bottom: "45px", opacity: 0.9, color: "grey" })}
     return setLabelStyles({ bottom: "12px", opacity: 0.8, color: "black" });
   };
 

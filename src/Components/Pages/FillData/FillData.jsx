@@ -99,13 +99,13 @@ const FillData = (props) => {
         <div className={styles.inputFieldContainer}>
           <div className={styles.textField}>
             <TextField
-              placeholder="Enter your full name"
+              placeholder=" Enter your full name"
               formData={formData}
               setFormData={setFormData}
               val="name"
             />
             <TextField
-              placeholder="Your current profession"
+              placeholder=" Your current profession"
               formData={formData}
               setFormData={setFormData}
               val="currentProfession"
