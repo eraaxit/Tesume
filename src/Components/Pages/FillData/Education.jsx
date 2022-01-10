@@ -22,6 +22,7 @@ const Education = (props) => {
 
       {educations.map((eachEducation, i) => (
         <div key={i} className={styles.moreInfo}>
+          <div className={styles.inputFields}>
           <input
             type="text"
             name="institution_name"
@@ -53,6 +54,7 @@ const Education = (props) => {
             onChange={(e) => onChangeText(e, i)}
             placeholder="Grades"
           />
+          </div>
           {i === 0 ? (
             <div
               className={styles.plus}

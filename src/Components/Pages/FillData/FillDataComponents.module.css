@@ -1,62 +1,69 @@
 .addBox {
-    height: auto;
-    width: 400px;
-    margin: 10px auto 30px auto;
-    background-color: transparent;
-  }
-  .addBox input:nth-last-child(1){
-    margin-bottom: 20px;
-  }
-  .addBox input:nth-child(1){
-    margin-top:10px;
-  }
-  .moreInfo {
-    background-color:#adbdc2;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2),
-      1px 2px 5px 0 rgba(0, 0, 0, 0.19);
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  .moreInfo input {
-    border: none;
-    border-bottom: 1px solid black;
-    width: 92%;
-    padding: 5px;
-    margin-left: 10px;
-    margin-bottom: 15px;
-    background:none;
-  }
-  
-  .moreInfo:hover {
-    box-shadow: 5px 6px 10px 0 rgba(0, 0, 0, 0.2),
-      5px 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  .plus {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    font-size: 30px;
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-    background-color: #8b9a9f;
-    position: relative;
-    top:15px;
-    left:185px;
-    border: 1px solid rgba(0, 0, 0, 0.253)
-  }
-  .plus:hover {
-    transition: 0.5s ease;
-    cursor: pointer;
-    background-color:#adbdc2 ;
-  }
- 
-  .heading{
-    font-size: larger;
-    color: rgb(10, 10, 10);
-    font: inherit;
-    font-family: Arial, Helvetica, sans-serif;
-  }  
+  height: auto;
+  margin-bottom: 30px;
+  background-color: transparent;
+  padding-left: 20px;
+}
+.addBox input:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+.addBox input:nth-child(1) {
+  margin-top: 10px;
+}
+.moreInfo {
+  background-color: #8b9a9f;
+  height: auto;
+  border-radius: 5px;
+  border-bottom: 3px solid black;
+  flex-direction: column;
+  margin-bottom: 25px;
+  padding-top: 10px;
+}
+.moreInfo input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 92%;
+  padding-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+  background: none;
+}
+
+.moreInfo:hover {
+  box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.2),
+    2px 3px 5px 0 rgba(0, 0, 0, 0.226);
+}
+
+.inputFields {
+  height: 140px;
+}
+
+.plus {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8b9a9f;
+  margin: auto;
+  position: relative;
+  top: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.253);
+}
+.plus:hover {
+  transition: 0.5s ease;
+  cursor: pointer;
+  background-color: #adbdc2;
+}
+
+.heading {
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-decoration: underline;
+}

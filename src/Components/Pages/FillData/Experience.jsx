@@ -23,12 +23,13 @@ const Experience = (props) => {
     <h3 className={styles.heading}>Experience</h3>
       {experiences.map((eachExperience, i) => (
         <div key={i} className={styles.moreInfo}>
+          <div className={styles.inputFields}>
           <input
             type="text"
             name="title"
             value={eachExperience.title}
             onChange={(e) => onChangeText(e, i)}
-            placeholder="title"
+            placeholder="Title"
           />
           <br />
           <input
@@ -46,6 +47,7 @@ const Experience = (props) => {
             onChange={(e) => onChangeText(e, i)}
             placeholder="Organisation"
           />
+          </div>
           {i === 0 ? (
             <div
               className={styles.plus}
