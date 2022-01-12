@@ -1,10 +1,10 @@
 body{
-  background-color:#8b9a9f;
+  background-color:#fff;
 }
 .container{
   min-height: 90vh;
   max-width: 85vw;
-  background-color: #fff;
+  background-color:rgb(44, 150, 144);
   margin:30px auto;
   display: flex;
   flex-direction: column;
@@ -22,11 +22,13 @@ body{
   height: auto;
   width:80%;
   margin:10px;
-  background-color: #adbdc2;
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border-radius: 10px;
+
 
 }
 .inputImageContainer{
@@ -39,9 +41,12 @@ body{
   margin:0px 20px;
   height: auto;
   width: 40%;
+  
 }
 .textField input{
   font-size: 18px;
+  background-color: rgb(44, 150, 144);
+  border-radius: 5px;
 }
 .link{
   display: flex;
@@ -62,9 +67,9 @@ body{
   width: 40px;
   border-radius: 50%;
   padding: 4.7px 4.5px;
-  background-color: #8b9a9f;
+  background-color: whitesmoke;
   font-size: 33px;
-  color: black;
+  color: rgb(44, 150, 144);
 }
 .balls:hover {
   background-color: #adbdc2;
@@ -74,7 +79,7 @@ body{
 .balls i {
   height: 0px;
   width: 0px;
-  background-color:blue
+  /* background-color:blue */
 }
 .pasteLink{
   text-align: center;
@@ -85,7 +90,7 @@ body{
   height: 35px;
   width: 100px;
   border-radius: 10px;
-  background-color: #8b9a9f;
+  background-color: rgb(44, 150, 144);
   font-size: small;
   display: inline-block;
   position: relative;
@@ -120,7 +125,7 @@ body{
   max-width: 14vw;
   border-radius: 50%;
   margin:auto;
-  background-color:#adbdc2;
+  background-color: rgb(44, 150, 144);
   background-size: contain;
 }
 .image {
@@ -152,7 +157,7 @@ body{
   display: none;
 }
 .takeImage i {
-  color: black;
+  color: rgb(44, 150, 144);
   font-size: 30px;
   background-color: transparent;
 }
@@ -167,7 +172,7 @@ body{
 .horizontalLine span{
   padding:10px 15px;
   font-size: 30px;
-  background-color: white;
+  background-color: rgb(44, 150, 144);
   font-weight: bold;
 }
 .row2{

@@ -1,0 +1,34 @@
+.outerCont{
+    height: 100vh;
+    width:100vw;
+    background-color: hotpink;
+    display: flex;
+    flex-direction: row;
+}
+.col1{
+    height: 100%;
+    width: 30%;
+    background-color: red;
+}
+.col2{
+    height: 100%;
+    width: 0.5%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.col3{
+    height: 100%;
+    width: 69.5%;
+    background-color: turquoise;
+}
+.col2 .balls{
+    height: 7px;
+    width: 7px;
+    position: relative;
+    left:-3px;
+    background-color: white;
+    border-radius:50% ;
+}

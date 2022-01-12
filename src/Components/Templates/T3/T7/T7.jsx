@@ -1,5 +1,8 @@
 import styles from "./T7.module.css";
 import im from './im.jpeg';
+import EachEdu from "../../components/EachEdu";
+import EachExperience from "../../components/EachExperience";
+import EachSkill from "../../components/EachSkill";
 
 export default function T7(props) {
 
@@ -33,7 +36,7 @@ export default function T7(props) {
            
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
-        </li>
+       </li>
         <li>
           <a href={"socialLinks.github"}>
            
@@ -67,7 +70,28 @@ export default function T7(props) {
           <div className={styles.balls}></div>
           <div className={styles.balls}></div>
         </div>
-        <div className={styles.col3}></div>
+        <div className={styles.col3}>
+        <div className={styles.education}>
+          <div className={styles.T1_container}>
+            <h5>
+              <ion-icon name="book"></ion-icon>Education
+            </h5>
+          </div>
+          <div className={styles.T1_edu_wrapper}>
+            {educations.map((each, i) => (
+              <EachEdu
+                key={i}
+                {...{
+                  institution_name: each.institution_name,
+                  enroll_year: each.enroll_year,
+                  passout_year: each.passout_year,
+                  grades: each.grades,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+        </div>
       </div>
     </div>
   );
