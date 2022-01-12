@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Source+Sans+Pro&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.T5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    position: relative;
+    width: 600px;
+    height: 1000px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
+}
+.container .right_side{
+    position: relative;
+    background-color: #003147;
+    padding:10px;
+}
+.profile_details{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profile_photo{
+    position:relative;
+    width:350px;
+    height:350px;
+    overflow:hidden;
+}
+.profile_photo img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.profile_details h2{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color:#fff;
+    text-transform:uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height:1.4rem;
+}
+.profile_details p{
+    font-size:1.0rem;
+    font-weight: 300;
+    color:white;
+    line-height:0.1rem;
+}
+.links{
+    padding-top: 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+.links ul{
+    position:relative;
+}
+.links ul li{
+    position:relative;
+    list-style:none;
+    margin:10px 0;
+    cursor:pointer;
+
+}
+.links ul li .icon{
+    display:inline-block;
+    width:30px;
+    font-size: 30px;
+    color:rgb(184, 179, 179);
+    vertical-align: middle;
+}
+.links ul li span{
+    color:#fff;
+    font-weight: 300;
+}
+.links ul li .text{
+    padding-left: 20px;
+    font-size: 23px;
+}
+.container .left_side{
+    position: relative;
+    background-color: #fff;
+    padding:40px;
+}
+.left_side .education{
+    margin-bottom: 20px;
+}
+.left_side .skills{
+    margin-bottom: 20px;
+}
+.left_side .experience{
+    margin-bottom: 20px;
+}
+.T5_container{
+    display:flex;
+    justify-content: space-between;
+}
+.T5_container h5{
+    color:#003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+.T5_container ion-icon{
+    vertical-align: middle;
+    padding-right: 5px;
+}
+.T5_container .add-more{
+    font-size:23px;
+}
+
+@media (max-width:900px){
+    .T5{
+        transform:scale(0.4);
+    }
+    
+}

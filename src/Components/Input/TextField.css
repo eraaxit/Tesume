@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .input_wrapper{
     position: relative;
     padding: 8px 0px;
@@ -18,3 +19,23 @@
     font-size: 14px;
     position: absolute;
 }
+=======
+.input_wrapper {
+  position: relative;
+  padding: 8px 0px;
+}
+.input_wrapper > input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 6px;
+  transition: 0.4s;
+  color: rgb(42, 42, 42);
+  letter-spacing: 1px;
+}
+.input_wrapper > label {
+  transition: 0.4s;
+  font-size: 15px;
+  position: absolute;
+}
+>>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c

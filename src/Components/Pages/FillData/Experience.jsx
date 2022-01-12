@@ -11,33 +11,25 @@ const Experience = (props) => {
     setExperiences(newArr);
   };
 
+  const handleremove = (i) => {
+    const shortarr = experiences
+      .slice(0, i)
+      .concat(experiences.slice(i + 1, experiences.length));
+    setExperiences(shortarr);
+  };
+
   return (
     <div className={styles.addBox}>
     <h3 className={styles.heading}>Experience</h3>
-      <div
-        className={styles.plus}
-        onClick={() =>
-          setExperiences([
-            ...experiences,
-            {
-              title: "",
-              period: "",
-              organization: "",
-              grades: "",
-            },
-          ])
-        }
-      >
-        +
-      </div>
       {experiences.map((eachExperience, i) => (
         <div key={i} className={styles.moreInfo}>
+          <div className={styles.inputFields}>
           <input
             type="text"
             name="title"
             value={eachExperience.title}
             onChange={(e) => onChangeText(e, i)}
-            placeholder="title"
+            placeholder="Title"
           />
           <br />
           <input
@@ -55,8 +47,32 @@ const Experience = (props) => {
             onChange={(e) => onChangeText(e, i)}
             placeholder="Organisation"
           />
+          </div>
+          {i === 0 ? (
+            <div
+              className={styles.plus}
+              onClick={() =>
+                setExperiences([
+                  ...experiences,
+                  {
+                    institution_name: "",
+                    enroll_year: "",
+                    passout_year: "",
+                    grades: "",
+                  },
+                ])
+              }
+            >
+              +
+            </div>
+          ) : (
+            <div className={styles.plus} onClick={() => handleremove(i)}>
+              -
+            </div>
+          )}
         </div>
       ))}
+      
     </div>
   );
 };

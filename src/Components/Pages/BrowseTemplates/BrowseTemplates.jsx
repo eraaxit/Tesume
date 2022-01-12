@@ -4,7 +4,12 @@ import styles from "./BrowseTemplates.module.css";
 import T1 from "../../Templates/T1/T1";
 import T2 from "../../Templates/T2/T2";
 import T3 from "../../Templates/T3/T3";
+<<<<<<< HEAD
 import T7 from "../../Templates/T7/T7";
+=======
+import T4 from "../../Templates/T4/T4";
+import T5 from "../../Templates/T5/T5";
+>>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
 import React, { useContext, useState } from "react";
 import FormContext from "../../Context/FormContext";
 import Education from "../FillData/Education";
@@ -17,13 +22,23 @@ const BrowseTemplates = () => {
   // const { addData } = formContext;
 
   const [step, setStep] = useState(1);
-  const handleArrow = () => {
+  const handleRightArrow = () => {
     if (step === 2) {
       setStep(1);
       return;
     }
     setStep(step + 1);
   };
+
+  const handleLeftArrow = () => {
+    if (step === 1) {
+      setStep(2);
+      return;
+    }
+    setStep(step - 1);
+  };
+  
+
 
   const [formData, setFormData] = useState(formContext);
   const { name, currentProfession } = formData;
@@ -93,15 +108,31 @@ const BrowseTemplates = () => {
             <Skills skills={skills} setSkills={setSkills}></Skills>
             {/* <button className={styles.updateDetails} onClick={nextFunction}>Refresh</button> */}
           </div>
+          
         </div>
+        
       </div>
+      
 
       <div>
-        <div className={styles.all_templates}>
-          {step === 1 && <T7  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={formContext.displayPicture} />}
+      <div className={styles.leftarrow} onClick={handleLeftArrow}>
+      <ion-icon name="arrow-dropleft-circle"></ion-icon>
         </div>
 
-        <div className={styles.arrow} onClick={handleArrow}>
+        <div className={styles.all_templates}>
+<<<<<<< HEAD
+          {step === 1 && <T7  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={formContext.displayPicture} />}
+=======
+          {step === 1 && <T1  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={formContext.displayPicture}  />}
+          {step === 1 && <T2  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={formContext.displayPicture} />}
+          {step === 2 && <T3  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={formContext.displayPicture} />}
+          {step === 1 && <T4  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={formContext.displayPicture} />}
+          {step === 2 && <T5  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={formContext.displayPicture} />}
+          
+>>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
+        </div>
+
+        <div className={styles.rightarrow} onClick={handleRightArrow}>
           <ion-icon name="arrow-dropright-circle"></ion-icon>
         </div>
       </div>
