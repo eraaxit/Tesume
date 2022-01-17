@@ -1,0 +1,373 @@
+body {
+  background: rgb(240, 240, 240);
+}
+
+/* Rectangle 1 */
+
+.line1 {
+  position: absolute;
+  width: 150vw;
+  height: 55px;
+  left: -20vw;
+  top: 45vh;
+  background: var(--blue);
+
+  transform: rotate(-16deg);
+  z-index: -2;
+}
+
+/* Rectangle 3 */
+
+.line2 {
+  position: absolute;
+  width: 150vw;
+  height: 45px;
+  left: -20vw;
+  top: 39vh;
+  transform: rotate(-16deg);
+  z-index: -3;
+  background: rgb(65, 65, 65);
+}
+
+/* Rectangle 2 */
+.line3 {
+  position: absolute;
+  width: 150vw;
+  height: 10px;
+  left: -20vw;
+  top: 43.5vh;
+  transform: rotate(-16deg);
+  z-index: -1;
+  background: #6acc80;
+}
+
+.container {
+  min-height: 90vh;
+  background-color: white;
+  max-width: 85vw;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 8px 10px 0 rgba(0, 0, 0, 0.2),
+    5px 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow-x: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.188);
+}
+.row1 {
+  min-height: 30vh;
+  width: 85%;
+  display: flex;
+  margin: 30px auto;
+  margin-top: 60px;
+}
+.inputFieldContainer {
+  height: 200px;
+  width: 80%;
+  margin: 10px;
+  background-color: #c5c5c5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 2px 3px 0 black;
+  border: 2px solid var(--blue);
+}
+.inputImageContainer {
+  height: auto;
+  width: 20%;
+  margin: 0px;
+}
+
+.textField {
+  margin: 0px 20px;
+  height: auto;
+  width: 40%;
+}
+.textField input {
+  color: black;
+  font-size: 25px;
+  background: none;
+  border-bottom: 1px solid black;
+}
+
+.textField > input::placeholder {
+  color: black;
+  background-color: black;
+}
+.link {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 55%;
+  position: relative;
+  top: 15px;
+}
+.textBalls {
+  width: 100%;
+  margin: 5px auto;
+  padding: 0px 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.balls {
+  height: 60px;
+  width: 45px;
+  color: black;
+  position: relative;
+  top: -40px;
+}
+.linkBorder {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: rgb(138, 138, 138);
+  position: relative;
+  top: 50px;
+}
+.linkBorderWithData {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #3b974f;
+  position: relative;
+  top: 50px;
+}
+.linkBorder:hover,
+.linkBorderWithData:hover {
+  background-color: #adbdc2;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.balls i {
+  height: 0px;
+  width: 0px;
+  font-size: 30px;
+  position: relative;
+  top: 7.5px;
+  left: 7.5px;
+}
+.pasteLink {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.toolTip {
+  height: 35px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #8b9a9f;
+  font-size: small;
+  display: inline-block;
+  position: relative;
+  top: -99px;
+  visibility: hidden;
+}
+.toolTip > input {
+  height: 35px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #8b9a9f;
+  color: black;
+}
+.toolTip > input::placeholder {
+  color: black;
+}
+.balls:hover .toolTip {
+  visibility: visible;
+}
+.toolTip::before {
+  content: "";
+  position: relative;
+  top: 94%;
+  left: 7%;
+  border: 8px solid;
+  border-color: #8b9a9f transparent transparent transparent;
+}
+
+.imageHolder {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: white;
+  background-size: contain;
+  position: relative;
+  top: 40px;
+  padding: 2px;
+  border: 2.5px solid #3b974f;
+}
+.image {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-size: contain;
+}
+.imageHolder:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.takeImage {
+  height: 12vw;
+  max-width: 12vw;
+  border-radius: 50%;
+  font-size: 25px;
+  color: black;
+  opacity: 0;
+  position: relative;
+  top: 3vw;
+  left: 2vw;
+}
+.imageHolder:hover .takeImage {
+  opacity: 1;
+}
+.imageHolder input {
+  display: none;
+}
+.takeImage i {
+  color: black;
+  font-size: 30px;
+  background-color: transparent;
+}
+.spinner {
+  height: 10vw;
+  position: absolute;
+  padding: 10px;
+}
+
+.horizontalLine {
+  width: 90%;
+  margin: 30px auto;
+  border-bottom: 2px solid black;
+  text-align: center;
+  line-height: 0.1rem;
+  word-spacing: 0.2rem;
+}
+.horizontalLine span {
+  padding: 10px 15px;
+  font-size: 30px;
+  background-color: white;
+  font-weight: bold;
+}
+.row2 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.row2 > div {
+  height: auto;
+  width: 100%;
+}
+.button {
+  width: 100px;
+  margin: auto;
+  background-color: #3b974f;
+  height: 40px;
+  font-size: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.253);
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #8b9a9f;
+}
+
+/*--media queries--*/
+@media (max-width: 800px) {
+  .inputImageContainer {
+    margin-left: 20px;
+  }
+  .container {
+    max-width: 100vw;
+    margin: 0;
+    border-radius: 0;
+  }
+  .inputFieldContainer {
+    width: 90%;
+  }
+  .textField input {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 670px) {
+  .inputImageContainer {
+    margin-left: 00px;
+  }
+
+  .inputFieldContainer {
+    height: 220px;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .textField {
+    margin: 0px 10px;
+    height: auto;
+    width: 80%;
+  }
+  .pasteLink {
+    margin-top: 0px;
+    font-size: 15px;
+  }
+  .balls i {
+    font-size: 20px;
+  }
+  .linkBorder {
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+  }
+  .toolTip {
+    top: -58px;
+    height: 25px;
+    right:10px;
+  }
+  .toolTip > input {
+    height: 25px;
+  }
+
+  .textField input {
+    font-size: 15px;
+    background: none;
+    border-bottom: 1px solid black;
+  }
+}
+
+@media (max-width: 520px) {
+  .inputFieldContainer {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 70px;
+    height: 240px;
+    justify-content: center;
+  }
+  .textField input {
+    font-size: 12px;
+  }
+  .row1 {
+    flex-direction: column-reverse;
+    width: 85%;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .inputImageContainer {
+    margin-bottom: 40px;
+  }
+  .horizontalLine span {
+    font-size: 20px;
+  }
+  .row2 {
+    flex-direction: column;
+  }
+  .pasteLink {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+}

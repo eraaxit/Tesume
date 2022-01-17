@@ -5,7 +5,7 @@ const Experience = (props) => {
 
   const {experiences,setExperiences} = props
   
-  const onChangeText = (e, i) => {
+  const onChangeText = (e, i) => { 
     let newArr = [...experiences];
     newArr[i][e.target.name] = e.target.value;
     setExperiences(newArr);

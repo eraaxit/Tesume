@@ -1,32 +1,6 @@
-<<<<<<< HEAD
-body{
-  background-color:#fff;
-}
-.container{
-  min-height: 90vh;
-  max-width: 85vw;
-  background-color:rgb(44, 150, 144);
-  margin:30px auto;
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  box-shadow: 7px 8px 10px 0 rgba(0, 0, 0, 0.2),
-    5px 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.row1{
-  height: auto;
-  width: 85%;
-  display: flex;
-  margin: 10px auto ;
-}
-.inputFieldContainer{
-  height: auto;
-  width:80%;
-  margin:10px;
-  background-color: white;
-=======
 body {
   background: rgb(240, 240, 240);
+  overflow-x: hidden;
 }
 
 /* Rectangle 1 */
@@ -92,39 +66,10 @@ body {
   width: 80%;
   margin: 10px;
   background-color: #c5c5c5;
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-<<<<<<< HEAD
-  border-radius: 10px;
-
-
-}
-.inputImageContainer{
-  height: auto;
-  width: 20%;
-  margin:0px;
-}
-
-.textField{
-  margin:0px 20px;
-  height: auto;
-  width: 40%;
-  
-}
-.textField input{
-  font-size: 18px;
-  background-color: rgb(44, 150, 144);
-  border-radius: 5px;
-}
-.link{
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width:55% ;
-=======
   box-shadow: 1px 2px 3px 0 black;
   border: 2px solid var(--blue);
 }
@@ -157,7 +102,6 @@ body {
   width: 55%;
   position: relative;
   top: 15px;
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
 }
 .textBalls {
   width: 100%;
@@ -168,17 +112,6 @@ body {
   justify-content: space-around;
 }
 .balls {
-<<<<<<< HEAD
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  padding: 4.7px 4.5px;
-  background-color: whitesmoke;
-  font-size: 33px;
-  color: rgb(44, 150, 144);
-}
-.balls:hover {
-=======
   height: 60px;
   width: 45px;
   color: black;
@@ -203,7 +136,6 @@ body {
 }
 .linkBorder:hover,
 .linkBorderWithData:hover {
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
   background-color: #adbdc2;
   cursor: pointer;
   transition: 0.3s ease;
@@ -211,14 +143,6 @@ body {
 .balls i {
   height: 0px;
   width: 0px;
-<<<<<<< HEAD
-  /* background-color:blue */
-}
-.pasteLink{
-  text-align: center;
-  margin-top:10px;
-  font-size: 25px;
-=======
   font-size: 30px;
   position: relative;
   top: 7.5px;
@@ -228,28 +152,19 @@ body {
   text-align: center;
   margin-top: 10px;
   font-size: 20px;
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
 }
 .toolTip {
   height: 35px;
   width: 100px;
   border-radius: 10px;
-<<<<<<< HEAD
-  background-color: rgb(44, 150, 144);
-=======
   background-color: #8b9a9f;
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
   font-size: small;
   display: inline-block;
   position: relative;
   top: -99px;
   visibility: hidden;
 }
-<<<<<<< HEAD
-.toolTip>input {
-=======
 .toolTip > input {
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
   height: 35px;
   width: 100%;
   border: none;
@@ -258,13 +173,8 @@ body {
   background-color: #8b9a9f;
   color: black;
 }
-<<<<<<< HEAD
-.toolTip>input::placeholder{
-  color:black
-=======
 .toolTip > input::placeholder {
   color: black;
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
 }
 .balls:hover .toolTip {
   visibility: visible;
@@ -277,15 +187,6 @@ body {
   border: 8px solid;
   border-color: #8b9a9f transparent transparent transparent;
 }
-<<<<<<< HEAD
-.imageHolder {
-  height: 14vw;
-  max-width: 14vw;
-  border-radius: 50%;
-  margin:auto;
-  background-color: rgb(44, 150, 144);
-  background-size: contain;
-=======
 
 .imageHolder {
   height: 150px;
@@ -298,7 +199,6 @@ body {
   top: 40px;
   padding: 2px;
   border: 2.5px solid #3b974f;
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
 }
 .image {
   height: 100%;
@@ -311,18 +211,6 @@ body {
   cursor: pointer;
 }
 .takeImage {
-<<<<<<< HEAD
-  height: 15vw;
-  max-width: 15vw;
-  border-radius: 50%;
-  background-color: transparent;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  opacity: 0;
-=======
   height: 12vw;
   max-width: 12vw;
   border-radius: 50%;
@@ -332,7 +220,6 @@ body {
   position: relative;
   top: 3vw;
   left: 2vw;
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
 }
 .imageHolder:hover .takeImage {
   opacity: 1;
@@ -341,36 +228,6 @@ body {
   display: none;
 }
 .takeImage i {
-<<<<<<< HEAD
-  color: rgb(44, 150, 144);
-  font-size: 30px;
-  background-color: transparent;
-}
-.horizontalLine{
-  width: 90%;
-  margin: 30px auto;
-  border-bottom:2px solid black;
-  text-align: center;
-  line-height:0.1rem;
-  word-spacing:0.2rem;
-}
-.horizontalLine span{
-  padding:10px 15px;
-  font-size: 30px;
-  background-color: rgb(44, 150, 144);
-  font-weight: bold;
-}
-.row2{
-  display: flex;
-  width: 90%;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.row2 >div{
-  height: auto;
-  width: 35%;
-}
-=======
   color: black;
   font-size: 30px;
   background-color: transparent;
@@ -514,4 +371,3 @@ body {
     padding-left: 10px;
   }
 }
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c

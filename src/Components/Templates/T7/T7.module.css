@@ -1,34 +1,88 @@
 .outerCont{
-    height: 100vh;
-    width:100vw;
-    background-color: hotpink;
+    min-height: 1000px;
+    min-width:600px;
     display: flex;
+    background-color: white;
     flex-direction: row;
+    z-index: 1;
+    top:-181px;
+    left:40px;
+    position:relative;
+  color: #003147;
+
 }
 .col1{
     height: 100%;
-    width: 30%;
-    background-color: red;
+    width: 45%;
 }
 .col2{
     height: 100%;
     width: 0.5%;
-    background-color: white;
+    background-color: #003147;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
 
 }
 .col3{
     height: 100%;
     width: 69.5%;
-    background-color: turquoise;
 }
 .col2 .balls{
-    height: 7px;
-    width: 7px;
+    height: 12px; 
+    width: 12px;
     position: relative;
-    left:-3px;
-    background-color: white;
+    left:-5px;
+    background-color: #003147;
     border-radius:50% ;
 }
+.profile_photo{
+    height: 200px;
+    width: 200px;
+    padding:10px;
+
+}
+.profile_photo img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.profile_info{
+    padding:20px;
+    text-align:center;
+    font-size: large;
+}
+.links{
+    margin: 30px 25%;
+}
+.links ul{
+    padding:15px;
+    list-style: none;
+}
+.links ul li{
+    margin:20px;
+    font-size: 40px;
+  color: #003147;
+}
+.education{
+    margin: 100px 30px;
+    font-size: large;
+}
+.skills{
+    margin-top:30px;
+    font-size: large;
+}
+.experience{
+    margin-top:30px;
+    font-size: large;
+
+}
+.footer {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom:0px;
+    background-color: #003147;
+  }
+  

@@ -1,0 +1,73 @@
+.wrapper {
+    height: 100vh;
+    background: rgb(49, 49, 49);
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo_rec {
+    width: 80vw;
+    height: 200px;
+    background: url("../../../Assets/logo-rec.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.content {
+    flex-direction: column;
+}
+
+.tagline {
+    font-size: 34px;
+    width: 98vw;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    margin: 16px 0px;
+}
+
+.que {
+    color: var(--green);
+    font-size: large;
+}
+
+.content > .button {
+    padding: 8px;
+    margin-top: 14px;
+    width: 200px;
+    font-size: 18px;
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.content > .button:active {
+    box-shadow: none;
+    filter: brightness(80%);
+}
+.content > .button:nth-child(3) {
+    color: var(--white);
+    background: var(--blue);
+}
+
+.content > .button:nth-child(4) {
+    color: var(--blue);
+    background: var(--green);
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+@media (max-width:600px) {
+    .tagline{
+        font-size: 18px;
+    }
+}

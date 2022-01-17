@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c
 import styles from "./FillDataComponents.module.css";
 
 const Education = (props) => {
@@ -26,6 +22,9 @@ const Education = (props) => {
 
       {educations.map((eachEducation, i) => (
         <div key={i} className={styles.moreInfo}>
+        {i === 0 ?"":    ( <div className={styles.minus} onClick={() => handleremove(i)}>
+            - 
+          </div>)}
           <div className={styles.inputFields}>
           <input
             type="text"
@@ -59,7 +58,7 @@ const Education = (props) => {
             placeholder="Grades"
           />
           </div>
-          {i === 0 ? (
+          
             <div
               className={styles.plus}
               onClick={() =>
@@ -76,11 +75,7 @@ const Education = (props) => {
             >
               +
             </div>
-          ) : (
-            <div className={styles.plus} onClick={() => handleremove(i)}>
-              -
-            </div>
-          )}
+          
         </div>
       ))}
     </div>

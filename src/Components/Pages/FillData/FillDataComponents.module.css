@@ -1,63 +1,4 @@
 .addBox {
-<<<<<<< HEAD
-    height: auto;
-    width: 65%;
-    margin: 10px auto 30px auto;
-    background-color: transparent;
-  }
-  .addBox input:nth-last-child(1){
-    margin-bottom: 20px;
-  }
-  .addBox input:nth-child(1){
-    margin-top:10px;
-  }
-  .moreInfo {
-    height: auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2),
-      1px 2px 5px 0 rgba(0, 0, 0, 0.19);
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  .moreInfo input {
-    border: none;
-    border-bottom: 1px solid black;
-    width: 65%;
-    padding: 5px;
-    margin-left: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .moreInfo:hover {
-    box-shadow: 5px 6px 10px 0 rgba(0, 0, 0, 0.2),
-      5px 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  .plus {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    float: right;
-    margin: 15px 10px;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-  }
-  .plus:hover {
-    transition: 0.5s ease;
-    cursor: pointer;
-    background-color: rgb(221, 215, 215);
-  }
-  .heading{
-    font-size: larger;
-    color: rgb(42, 133, 185);
-    font: inherit;
-    font-family: Arial, Helvetica, sans-serif;
-  }  
-=======
   height: auto;
   margin-bottom: 30px;
   background-color: transparent;
@@ -116,10 +57,30 @@
   top: 20px;
   border: 2px solid rgba(0, 0, 0, 0.397);
 }
+
 .plus:hover {
   transition: 0.5s ease;
   cursor: pointer;
   background-color: #adbdc2;
+}
+
+.minus {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative;
+  left:87%;
+  background-color:rgb(219, 211, 211);
+  border: 2px solid rgba(0, 0, 0, 0.397);
+}
+
+.minus:hover{
+  cursor: pointer;
+  transition: 0.5s ease;  
 }
 
 .heading {
@@ -131,4 +92,3 @@
   margin-left: 10px;
   text-decoration: underline;
 }
->>>>>>> cf8bd355a76ad8dbb72459dcbb0c099d3a56bb7c

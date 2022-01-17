@@ -2,14 +2,18 @@ import styles from "./T2.module.css";
 import EachEdu from '../components/EachEdu';
 import EachExperience from '../components/EachExperience';
 import EachSkill from '../components/EachSkill';
-
+import Pdf from 'react-to-pdf';
+import { useRef } from "react";
 const T2 = (props) => {
-
+    const ref=useRef();
     const {name,currentProfession,socialLinks,educations,skills,experiences,displayPicture} = props
 
     return(
 
-        <div className={styles.T2}>
+        <div className={styles.T2} ref={ref}>
+        <Pdf targetRef={ref} filename="Tesume.pdf" scale={2.5} x={-10} y={10}>
+         {({toPdf})=><button onClick={toPdf}>Generate Pdf</button>}
+        </Pdf>
             <div className={styles.container}>
                 <div className={styles.left_side}>
                     <div className={styles.profile_details}>
