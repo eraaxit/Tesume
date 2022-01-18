@@ -1,6 +1,6 @@
 body {
   background: rgb(240, 240, 240);
-  overflow-x:hidden;
+  /* overflow-x: hidden; */
 }
 
 /* Rectangle 1 */
@@ -327,7 +327,6 @@ body {
   .toolTip {
     top: -58px;
     height: 25px;
-    right:10px;
   }
   .toolTip > input {
     height: 25px;

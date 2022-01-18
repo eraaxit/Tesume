@@ -18,15 +18,15 @@ const Education = (props) => {
 
   return (
     <div className={styles.addBox}>
-      <h3 className={styles.heading}>Education</h3> 
-       
+      <h3 className={styles.heading}>Education</h3>
+
       {educations.map((eachEducation, i) => (
         <div key={i} className={styles.moreInfo}>
-          { i===0 ?"": <div className={styles.minus} onClick={() => handleremove(i)}>
-              -
-            </div>}
+        {i === 0 ?"":    ( <div className={styles.minus} onClick={() => handleremove(i)}>
+            - 
+          </div>)}
           <div className={styles.inputFields}>
-          <input 
+          <input
             type="text"
             name="institution_name"
             value={eachEducation.institution_name}
@@ -58,8 +58,8 @@ const Education = (props) => {
             placeholder="Grades"
           />
           </div>
-
-          <div
+          
+            <div
               className={styles.plus}
               onClick={() =>
                 setEducations([
@@ -75,6 +75,7 @@ const Education = (props) => {
             >
               +
             </div>
+          
         </div>
       ))}
     </div>

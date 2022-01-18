@@ -23,9 +23,6 @@ const Skills = (props) => {
     <h3 className={styles.heading}>Skills</h3>
       {skills.map((eachSkills, i) => (
         <div key={i} className={styles.moreInfo}>
-           { i===0 ?"": <div className={styles.minus} onClick={() => handleremove(i)}>
-              -
-            </div>}
           <div className={styles.inputFields}>
           <input
             type="text"
@@ -43,8 +40,8 @@ const Skills = (props) => {
             placeholder="Proficiency"
           />
           </div>
-          
-          <div
+          {i === 0 ? (
+            <div
               className={styles.plus}
               onClick={() =>
                 setSkills([
@@ -60,6 +57,11 @@ const Skills = (props) => {
             >
               +
             </div>
+          ) : (
+            <div className={styles.plus} onClick={() => handleremove(i)}>
+              -
+            </div>
+          )}
         </div>
       ))}
       

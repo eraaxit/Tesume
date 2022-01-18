@@ -57,6 +57,7 @@
   top: 20px;
   border: 2px solid rgba(0, 0, 0, 0.397);
 }
+
 .plus:hover {
   transition: 0.5s ease;
   cursor: pointer;
@@ -67,20 +68,19 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  font-size: 35px;
+  font-size: 28px;
   display: flex;
   align-items: center;
   justify-content: center; 
   position: relative;
-  left:90%;
+  left:87%;
+  background-color:rgb(219, 211, 211);
   border: 2px solid rgba(0, 0, 0, 0.397);
-  color:gray;
 }
-.minus:hover {
-  transition: 0.5s ease;
+
+.minus:hover{
   cursor: pointer;
-  color: black;
-  background-color: #adbdc2;
+  transition: 0.5s ease;  
 }
 
 .heading {

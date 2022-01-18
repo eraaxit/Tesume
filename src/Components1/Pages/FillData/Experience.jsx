@@ -5,7 +5,7 @@ const Experience = (props) => {
 
   const {experiences,setExperiences} = props
   
-  const onChangeText = (e, i) => {
+  const onChangeText = (e, i) => { 
     let newArr = [...experiences];
     newArr[i][e.target.name] = e.target.value;
     setExperiences(newArr);
@@ -23,9 +23,6 @@ const Experience = (props) => {
     <h3 className={styles.heading}>Experience</h3>
       {experiences.map((eachExperience, i) => (
         <div key={i} className={styles.moreInfo}>
-           { i===0 ?"": <div className={styles.minus} onClick={() => handleremove(i)}>
-              -
-            </div>}
           <div className={styles.inputFields}>
           <input
             type="text"
@@ -51,7 +48,8 @@ const Experience = (props) => {
             placeholder="Organisation"
           />
           </div>
-          <div
+          {i === 0 ? (
+            <div
               className={styles.plus}
               onClick={() =>
                 setExperiences([
@@ -67,6 +65,11 @@ const Experience = (props) => {
             >
               +
             </div>
+          ) : (
+            <div className={styles.plus} onClick={() => handleremove(i)}>
+              -
+            </div>
+          )}
         </div>
       ))}
       

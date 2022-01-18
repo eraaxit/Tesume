@@ -123,6 +123,13 @@
 .T2_container .add-more{
     font-size:23px;
 }
+.downloadBtn{
+    right:0;
+}
+.downloadBtn button{
+    background-color:blue;
+
+}
 
 @media (max-width:900px){
     .T2{

@@ -79,7 +79,6 @@ const FillData = (props) => {
       },
     });
   };
-
   const nextFunction = () => {
 
     addData({
@@ -90,6 +89,7 @@ const FillData = (props) => {
       educations: educations,
       experiences: experiences,
       skills: skills,
+
     });
     navigate("/templates");
   };
@@ -229,7 +229,6 @@ const FillData = (props) => {
     <div className={styles.line2}></div>
     <div className={styles.line3}></div>
     </div>
-  
     </>
   );
 };

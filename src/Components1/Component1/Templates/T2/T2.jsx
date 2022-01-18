@@ -1,21 +1,15 @@
-import React from "react";
 import styles from "./T2.module.css";
 import EachEdu from '../components/EachEdu';
 import EachExperience from '../components/EachExperience';
 import EachSkill from '../components/EachSkill';
 
-
 const T2 = (props) => {
-
-    
-
 
     const {name,currentProfession,socialLinks,educations,skills,experiences,displayPicture} = props
 
     return(
 
-        <div className={styles.T2} >
-            
+        <div className={styles.T2}>
             <div className={styles.container}>
                 <div className={styles.left_side}>
                     <div className={styles.profile_details}>
@@ -84,9 +78,7 @@ const T2 = (props) => {
                         </div>
                     </div>
                 </div>
-
             </div>
-        
         </div>
 
     )

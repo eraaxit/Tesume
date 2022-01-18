@@ -19,25 +19,26 @@ const FormState = (props) => {
       displayPicture:`${upload_img}`,
       educations: [
         {
-          institution_name: "HUIO Public School, Chennai",
-          enroll_year: "1900",
-          passout_year: "2003",
-          grades: "9.2",
+          
+            institution_name: "HUIO Public School, Chennai",
+            enroll_year: "1900",
+            passout_year: "2003",
+            grades: "9.2"
         }
       ], 
       skills: [
         {
-            skillName:"Creative",
-            proficiency:"designer"
-        },
-    ],
-    experiences: [
+          skillName:"Creative",
+          proficiency:"designer"
+      }
+      ],
+      experiences: [
         {
-            title: "Designer",
-            period: "3 years",
-            organization: "fine designer" 
-        },
-    ]
+          title: "Designer",
+          period: "3 years",
+          organization: "fine designer" 
+      }
+      ],
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);

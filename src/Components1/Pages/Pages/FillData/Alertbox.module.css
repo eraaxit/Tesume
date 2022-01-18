@@ -1,0 +1,41 @@
+
+.modalContainer{
+    position:absolute;
+    left:35%;
+    top:52%;
+    width:300px;
+    height:80px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px;
+    border-left: 8px solid rgb(42, 133, 185);
+    animation-name: popup;
+    animation-duration: 1s;  
+    animation-fill-mode: both;
+}
+@keyframes popup {
+    from {left: 0;}
+    to {left: 35%;}
+  }
+
+.message{
+    margin-top: 8px;
+    font-size: 15px;
+
+}
+
+.closebtn button{
+    background-color: transparent;
+    border:none;
+    font-size: 18px;
+    cursor:pointer;
+    font-weight: bold;    
+    margin-top: 6px;
+}
+.closebtn button:hover{
+    color:rgb(42, 133, 185);
+}

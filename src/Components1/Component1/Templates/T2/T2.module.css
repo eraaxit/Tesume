@@ -6,52 +6,39 @@
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
-.T3{
+.T2{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    
 }
-.upper_part{
+.container{
     position: relative;
     width: 600px;
-    max-height: 1000px;
+    height: 1000px;
     background-color: #fff;
     display: grid;
     grid-template-columns: 1fr 2fr;
     box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
 }
-.container{
-    position: relative;
-    background-color: #fff;
-    margin:0px;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
-
-}
-.lower_part{
-    position: relative;
-    max-width: 700px;
-    height: 800px;
-    background-color: #fff;
-    display: grid;
-    grid-template-rows:1fr 5fr;
-    box-shadow: 0px 35px 55px rgba(0,0,0,0.1);
-}
 .container .left_side{
+    position: relative;
     background-color: #003147;
-
+    padding:40px;
 }
 .profile_details{
-    margin-top: 60px;
-
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .profile_photo{
     position:relative;
     width:200px;
     height:200px;
+    border-radius: 50%;
     overflow:hidden;
 }
 .profile_photo img{
@@ -63,40 +50,47 @@
     object-fit: cover;
 }
 .profile_details h2{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color:#fff;
     text-transform:uppercase;
     text-align: center;
     font-weight: 600;
     line-height:1.4rem;
-
 }
 .profile_details p{
-    font-size:1.5rem;
+    font-size:1.0rem;
     font-weight: 300;
+    color:white;
     line-height:0.1rem;
-    text-align: center;
+}
+.links{
+    padding-top: 40px;
 }
 .links ul{
     position:relative;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    align-items: center;
-    justify-content: center;
 }
 .links ul li{
     position:relative;
     list-style:none;
-    padding-top:50px;
+    margin:10px 0;
     cursor:pointer;
-    text-align: center;
 }
 .links ul li .icon{
+    display:inline-block;
     width:30px;
-    font-size: 40px;
-    color:white;
+    font-size: 30px;
+    color:#03a9f4;
     vertical-align: middle;
 }
-
+.links ul li span{
+    color:#fff;
+    font-weight: 300;
+}
+.links ul li .text{
+    padding-left: 20px;
+    font-size: 23px;
+}
 .container .right_side{
     position: relative;
     background-color: #fff;
@@ -111,29 +105,28 @@
 .right_side .experience{
     margin-bottom: 20px;
 }
-.T3_container{
+.T2_container{
     display:flex;
     justify-content: space-between;
 }
-.T3_container h5{
+.T2_container h5{
     color:#003147;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
     font-weight: bolder;
 }
-.T3_container ion-icon{
+.T2_container ion-icon{
     vertical-align: middle;
     padding-right: 5px;
 }
-.T3_container .add-more{
+.T2_container .add-more{
     font-size:23px;
 }
+
 @media (max-width:900px){
-    .T3{
+    .T2{
         transform:scale(0.4);
     }
     
 }
-
-

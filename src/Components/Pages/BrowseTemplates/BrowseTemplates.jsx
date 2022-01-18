@@ -6,27 +6,67 @@ import T2 from "../../Templates/T2/T2";
 import T3 from "../../Templates/T3/T3";
 import T4 from "../../Templates/T4/T4";
 import T5 from "../../Templates/T5/T5";
-import T7 from "../../Templates/T7/T7";
-
-import React, { useContext, useState } from "react";
+import React, { useContext, useState,useEffect } from "react";
 import FormContext from "../../Context/FormContext";
 import Education from "../FillData/Education";
 import Experience from "../FillData/Experience";
 import Skills from "../FillData/Skills";
 import { useRef } from "react";
+import Pdf from "react-to-pdf";
+import { useMediaQuery } from 'react-responsive';
+
+
 
 const BrowseTemplates = () => {
 
-
+  const ref= React.createRef();
+  const ref1= React.createRef();
+  const ref2= React.createRef();
+  const ref3= React.createRef();
+  const ref4= React.createRef();
   
 
-  // const [style, setStyle] = useState("template_info");
-  
-  // const changeStyle = () => {
-  //   console.log(" you just clicked");
-  //   setStyle("template_info_modal");
-  // }
+ 
+  // const [toggle,setToggle]=useState('flex');
+  const handleToggle = () => {
+    if(form==='flex'){
+      setForm('none');
+      setTemp('flex');
+    }else{
+      setForm('flex');
+      setTemp('none');
+    }
+    console.log("d")
 
+  }
+  const [temp, setTemp] = useState('flex');
+  const [form, setForm] = useState('flex');
+
+  const match = useMediaQuery({query:'(max-width:1200px)'});
+  const match1 = useMediaQuery({query:'(max-width:1600px)'});
+  const match2 = useMediaQuery({query:'(max-width:800px)'});
+  const match3 = useMediaQuery({query:'(max-width:600px)'});
+  const match4 = useMediaQuery({query:'(max-width:1800px)'});
+  const match5 = useMediaQuery({query:'(max-width:2000px)'});
+  useEffect(() => {
+
+    return () => {
+        let l=window.innerWidth;
+        console.log(l);
+        if(l>=600){
+          setTemp('flex');
+          setForm('flex');
+          console.log("greater than 700");
+        }else if(l<600){
+          setForm('none');
+          setTemp('flex');
+          console.log("less than 700");
+
+        }
+    }
+  }, [match,match1,match2,match3,match4,match5])
+
+   
   const formContext = useContext(FormContext);
   const { addData } = formContext;
   
@@ -40,22 +80,22 @@ const selectImage = (e) => {
     };
    reader.readAsDataURL(e.target.files[0]);
   };
-  const [step, setStep] = useState(1);
-  const handleRightArrow = () => {
-    if (step === 2) {
-      setStep(1);
-      return;
-    }
-    setStep(step + 1);
-  };
+  //const [step, setStep] = useState(1);
+  // const handleRightArrow = () => {
+  //   if (step === 2) {
+  //     setStep(1);
+  //     return;
+  //   }
+  //   setStep(step + 1);
+  // };
 
-  const handleLeftArrow = () => {
-    if (step === 1) {
-      setStep(2);
-      return;
-    }
-    setStep(step - 1);
-  };
+  // const handleLeftArrow = () => {
+  //   if (step === 1) {
+  //     setStep(2);
+  //     return;
+  //   }
+  //   setStep(step - 1);
+  // };
   
 
 
@@ -84,22 +124,22 @@ const selectImage = (e) => {
 
   const [skills, setSkills] = useState(formData.skills);
 
-  const nextFunction = () => {
-    addData({
-      name: formData.name,
-      currentProfession: formData.currentProfession,
-      socialLinks:formData.socialLinks,
-      educations:educations,
-      displayPicture:displayPicture,
-      experiences:experiences,
-      skills:skills
-      }
-    ); 
-};
-
+//   const nextFunction = () => {
+//     addData({
+//       name: formData.name,
+//       currentProfession: formData.currentProfession,
+//       socialLinks:formData.socialLinks,
+//       educations:educations,
+//       displayPicture:displayPicture,
+//       experiences:experiences,
+//       skills:skills
+//       }
+//     ); 
+// };
+// style={{display:(toggle==='flex')?'none':'flex'}}
   return (
     <div className={styles.container}>
-      <div className={styles.template_info} >
+      <div className={styles.template_info} style={{display:`${form}`}}   >
           <div className={styles.innerContainer}>
           <div className={styles.inputImageContainer}>
           <div className={styles.imageHolder}>
@@ -146,7 +186,7 @@ const selectImage = (e) => {
             <div className={styles.dataField}>
             <Skills skills={skills} setSkills={setSkills}></Skills>
             </div>
-            <button className={styles.updateDetails} onClick={nextFunction}>Refresh</button>
+            {/* <button className={styles.updateDetails} onClick={nextFunction}>Refresh</button> */}
           </div>
           
         
@@ -154,19 +194,53 @@ const selectImage = (e) => {
       
 
       <div>
-        {/* <div className={`${styles.formIcon} ${style}`}> <i className="fas fa-file-signature" onClick={changeStyle}></i> </div> */}
-      <div className={styles.leftarrow} onClick={handleLeftArrow}>
+        <div className={styles.formIcon} > <i className="fas fa-file-signature" onClick={handleToggle}></i> </div>
+      {/* <div className={styles.leftarrow} onClick={handleLeftArrow}>
       <ion-icon name="arrow-dropleft-circle"></ion-icon>
-        </div>
+        </div> */}
 
-    <div className={styles.all_templates}>
-      {step === 1 && <T1  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture}  />}
-      {step === 1 && <T5  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />}
-      {step === 2 && <T3  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />}
-      {step === 1 && <T4  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />}
-      {step === 2 && <T5  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />}
-      {step === 2 && <T7  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />}
-      
+    <div className={styles.all_templates} style={{display:`${temp}`}}>
+  
+      <div ref={ref} className={styles.particular_template}  style={{width: 1000, height: 600}} >
+           <T1  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture}   /> 
+            <div className={styles.downloadBtn}>
+          <button><Pdf targetRef={ref}  filename="Tesume.pdf" scale={2.0} x={20.0}   > 
+              {({toPdf}) => <button onClick={toPdf}>Generate PDF</button>}
+              </Pdf></button>
+            </div>
+      </div>
+      <div ref={ref1} className={styles.particular_template} style={{width: 1000, height: 600}}>
+          <T2  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />
+            <div className={styles.downloadBtn}>
+              <button><Pdf targetRef={ref1}  filename="Tesume.pdf" scale={2.0} x={20.0}  > 
+              {({toPdf}) => <button onClick={toPdf}>Generate PDF</button>}
+              </Pdf></button>
+            </div>
+      </div>
+      <div ref={ref2} className={styles.particular_template} style={{width: 1000, height: 600}}>
+           <T3  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />
+            <div className={styles.downloadBtn}>
+              <button><Pdf targetRef={ref2}  filename="Tesume.pdf" scale={2.0} x={8.0}  > 
+              {({toPdf}) => <button onClick={toPdf}>Generate PDF</button>}
+              </Pdf></button>
+            </div>
+      </div>
+      <div ref={ref3} className={styles.particular_template} style={{width: 1000, height: 600}}>
+          <T4  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />
+          <div className={styles.downloadBtn}>
+              <button><Pdf targetRef={ref3}  filename="Tesume.pdf" scale={2.0} x={20.0}  > 
+              {({toPdf}) => <button onClick={toPdf}>Generate PDF</button>}
+              </Pdf></button>
+            </div>
+      </div>
+      <div ref={ref4} className={styles.particular_template} style={{width: 1000, height: 600}}>
+          <T5  name={name} currentProfession={currentProfession} educations={educations} skills={skills} experiences= {experiences} socialLinks={formContext.socialLinks} displayPicture={displayPicture} />
+          <div className={styles.downloadBtn}>
+              <button><Pdf targetRef={ref4}  filename="Tesume.pdf" scale={2.0} x={15.0}  > 
+              {({toPdf}) => <button onClick={toPdf}>Generate PDF</button>}
+              </Pdf></button>
+            </div>
+      </div>
     </div>
 
     {/* {window.innerWidth<1000&&window.innerWidth>600&&<div className={styles.all_templates}>
@@ -178,9 +252,9 @@ const selectImage = (e) => {
       
     </div>} */}
 
-        <div className={styles.rightarrow} onClick={handleRightArrow}>
+        {/* <div className={styles.rightarrow} onClick={handleRightArrow}>
           <ion-icon name="arrow-dropright-circle"></ion-icon>
-        </div>
+        </div> */}
       </div>
     </div>
   );
