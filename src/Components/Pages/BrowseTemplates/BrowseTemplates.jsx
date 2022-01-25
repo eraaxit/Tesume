@@ -55,7 +55,7 @@ const BrowseTemplates = () => {
   }, [match, match1, match2, match3, match4, match5]);
 
   const formContext = useContext(FormContext);
-  const { addData } = formContext;
+  
 
   const selectImage = (e) => {
     const reader = new FileReader();

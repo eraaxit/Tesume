@@ -2,7 +2,6 @@ import React, { useReducer } from "react";
 import FormContext from "./FormContext.js";
 import FormReducer from "./FormReducer.js";
 import { ADD_DATA} from "./types.js";
-import upload_img from "../Pages/FillData/upload_img.svg";
 
 const FormState = (props) => {
   
