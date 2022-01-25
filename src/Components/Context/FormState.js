@@ -2,41 +2,42 @@ import React, { useReducer } from "react";
 import FormContext from "./FormContext.js";
 import FormReducer from "./FormReducer.js";
 import { ADD_DATA} from "./types.js";
+import upload_img from "../Pages/FillData/upload_img.svg";
 
 const FormState = (props) => {
   
   const initialState = {
-      name: "",
-      currentProfession: "",
+      name: "Jasleen Kaur",
+      currentProfession: "Android Developer at SBI",
       socialLinks: {
-        linkedin: "",
-        github: "",
-        phone: "",
-        website: "",
-        email: "",
+        linkedin: "https://linkedin.com",
+        github: "https://linkedin.com",
+        phone: "+91 1234567890",
+        website: "https://jsjasleen.com",
+        email: "mailto:jasleen@email.com",
       }, 
-      displayPicture:"",
+      displayPicture:`https://i0.wp.com/bestprofilepix.com/wp-content/uploads/2014/07/stylish-hidden-face-girls-profile-pictures-for-facebook-with-camra.jpg?fit=480%2C720&ssl=1`,
       educations: [
         {
-          institution_name: "",
-          enroll_year: "",
-          passout_year: "",
-          grades: "",
+          institution_name: "HUIO Public School, Chennai",
+          enroll_year: "1900",
+          passout_year: "2003",
+          grades: "9.2",
         }
       ], 
       skills: [
         {
-          skillName: "",
-          proficiency: "",
-        }
-      ],
-      experiences: [
+            skillName:"Creative",
+            proficiency:"designer"
+        },
+    ],
+    experiences: [
         {
-          title: "",
-          period: "",
-          organization: ""
-        }
-      ],
+            title: "Designer",
+            period: "3 years",
+            organization: "fine designer" 
+        },
+    ]
   };
 
   const [state, dispatch] = useReducer(FormReducer, initialState);

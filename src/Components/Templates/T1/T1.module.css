@@ -40,6 +40,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position:10% 0%;
 }
 .details {
   margin-bottom: 20px;
@@ -70,7 +71,7 @@
   cursor: pointer;
   text-align: center;
 }
-.links ul li ion-icon {
+.links ul li i {
   width: 35px;
   font-size: 35px;
 }

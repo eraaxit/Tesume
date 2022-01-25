@@ -63,6 +63,26 @@
   background-color: #adbdc2;
 }
 
+.minus {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative;
+  left:90%;
+  border: 2px solid rgba(0, 0, 0, 0.397);
+  color:gray;
+}
+.minus:hover {
+  transition: 0.5s ease;
+  cursor: pointer;
+  color: black;
+  background-color: #adbdc2;
+}
+
 .heading {
   font-size: 22px;
   color: rgb(0, 0, 0);

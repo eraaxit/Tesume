@@ -15,7 +15,7 @@ const T5 = (props) => {
                 <div className={styles.left_side}>
                     <div className={styles.education}>
                         <div className={styles.T5_container}>
-                            <h5><ion-icon name="book"></ion-icon>Education</h5>
+                            <h5><i className="fas fa-book-open"></i>Education</h5>
                         </div>
                         <div className={styles.T5_edu_wrapper}>
                             {
@@ -25,7 +25,7 @@ const T5 = (props) => {
                     </div>
                     <div className={styles.skills}>
                         <div className={styles.T5_container}>
-                            <h5><ion-icon name="copy"></ion-icon>Skills</h5>
+                            <h5><i className="fas fa-copy"></i>Skills</h5>
                         </div>
                         <div className={styles.T5_skill_wrapper}>
                             {
@@ -35,7 +35,7 @@ const T5 = (props) => {
                     </div>
                     <div className={styles.experience}>
                         <div className={styles.T5_container}>
-                            <h5><ion-icon name="laptop"></ion-icon>Experience</h5>
+                            <h5><i className="fas fa-laptop"></i>Experience</h5>
                         </div>
                         <div className={styles.T5_exp_wrapper}>
                             {
@@ -57,23 +57,23 @@ const T5 = (props) => {
                     <div className={styles.links}>
                         <ul>
                             <li>
-                                <span className={styles.icon}><a href={socialLinks.linkedin}> <ion-icon name="logo-linkedin"></ion-icon> </a></span>
+                                <span className={styles.icon}><a href={socialLinks.linkedin}> <i className="fab fa-linkedin"></i></a></span>
                                 <span className={styles.text}>Linkedin</span>
                             </li>
                             <li>
-                                <span className={styles.icon}> <a href={socialLinks.github}> <ion-icon name="logo-github"></ion-icon></a></span>
+                                <span className={styles.icon}> <a href={socialLinks.github}><i className="fab fa-github"></i></a></span>
                                 <span className={styles.text}>Github</span>
                             </li>
                             <li>
-                                <span className={styles.icon}><a href={socialLinks.phone}> <ion-icon name="call"></ion-icon></a></span>
+                                <span className={styles.icon}><a href={socialLinks.phone}> <i className="fas fa-phone-square-alt"></i></a></span>
                                 <span className={styles.text}>Phone</span>
                             </li>
                             <li>
-                                <span className={styles.icon}><a href={socialLinks.email}> <ion-icon name="mail"></ion-icon></a></span>
+                                <span className={styles.icon}><a href={socialLinks.email}> <i className="fas fa-envelope"></i></a></span>
                                 <span className={styles.text}>Email</span>
                             </li>
                             <li>
-                                <span className={styles.icon}><a href={socialLinks.website}> <ion-icon name="globe"></ion-icon></a></span>
+                                <span className={styles.icon}><a href={socialLinks.website}> <i className="fas fa-globe-europe"></i></a></span>
                                 <span className={styles.text}>Website</span>
                             </li>
                         </ul>
