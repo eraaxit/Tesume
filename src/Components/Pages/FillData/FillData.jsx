@@ -6,7 +6,7 @@ import Experience from "./Experience";
 import Skills from "./Skills";
 import FormContext from "../../Context/FormContext";
 import { useNavigate } from "react-router-dom";
-import upload_img from "./upload_img.png"
+import upload_img from "./upload_img.svg"
 import spinner from "./loading-buffering.gif"
 
 const FillData = (props) => {
@@ -79,6 +79,7 @@ const FillData = (props) => {
       },
     });
   };
+
   const nextFunction = () => {
 
     addData({
@@ -94,18 +95,19 @@ const FillData = (props) => {
   };
 
   return (
+    <>
     <div className={styles.container}>
       <div className={styles.row1}>
         <div className={styles.inputFieldContainer}>
           <div className={styles.textField}>
             <TextField
-              placeholder="Enter your full name"
+              placeholder=" Enter your full name"
               formData={formData}
               setFormData={setFormData}
               val="name"
             />
             <TextField
-              placeholder="Your current profession"
+              placeholder=" Your current profession"
               formData={formData}
               setFormData={setFormData}
               val="currentProfession"
@@ -222,6 +224,13 @@ const FillData = (props) => {
       </div>
       <button className={styles.button} onClick={nextFunction}>Next</button>
     </div>
+    <div className={styles.lines}>
+    <div className={styles.line1}></div>
+    <div className={styles.line2}></div>
+    <div className={styles.line3}></div>
+    </div>
+  
+    </>
   );
 };
 export default FillData;

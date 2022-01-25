@@ -23,6 +23,9 @@ const Experience = (props) => {
     <h3 className={styles.heading}>Experience</h3>
       {experiences.map((eachExperience, i) => (
         <div key={i} className={styles.moreInfo}>
+           { i===0 ?"": <div className={styles.minus} onClick={() => handleremove(i)}>
+              -
+            </div>}
           <div className={styles.inputFields}>
           <input
             type="text"
@@ -48,8 +51,7 @@ const Experience = (props) => {
             placeholder="Organisation"
           />
           </div>
-          {i === 0 ? (
-            <div
+          <div
               className={styles.plus}
               onClick={() =>
                 setExperiences([
@@ -65,11 +67,6 @@ const Experience = (props) => {
             >
               +
             </div>
-          ) : (
-            <div className={styles.plus} onClick={() => handleremove(i)}>
-              -
-            </div>
-          )}
         </div>
       ))}
       

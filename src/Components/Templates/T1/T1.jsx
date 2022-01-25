@@ -33,7 +33,7 @@ const T1 = (props) => {
         <div className={styles.education}>
           <div className={styles.T1_container}>
             <h5>
-              <ion-icon name="book"></ion-icon>Education
+              <i className="fas fa-book-open"></i>Education
             </h5>
           </div>
           <div className={styles.T1_edu_wrapper}>
@@ -53,7 +53,7 @@ const T1 = (props) => {
         <div className={styles.skills}>
           <div className={styles.T1_container}>
             <h5>
-              <ion-icon name="copy"></ion-icon>Skills
+              <i className="fas fa-copy"></i>Skills
             </h5>
           </div>
           <div className={styles.T1_skill_wrapper}>
@@ -71,7 +71,7 @@ const T1 = (props) => {
         <div className={styles.experience}>
           <div className={styles.T1_container}>
             <h5>
-              <ion-icon name="laptop"></ion-icon>Experience
+            <i className="fas fa-laptop"></i>Experience
             </h5>
           </div>
           <div className={styles.T1_exp_wrapper}>
@@ -92,31 +92,27 @@ const T1 = (props) => {
           <ul>
             <li>
               <a href={socialLinks.linkedin}>
-               
-                <ion-icon name="logo-linkedin"></ion-icon>
+                <i className="fab fa-linkedin"></i>
               </a>
             </li>
             <li>
               <a href={socialLinks.github}>
-               
-                <ion-icon name="logo-github"></ion-icon>
+                <i className="fab fa-github"></i>
               </a>
             </li>
             <li>
               <a href={socialLinks.phone}>
-               
-                <ion-icon name="call"></ion-icon>
+                <i className="fas fa-phone-square-alt"></i>
               </a>
             </li>
             <li>
               <a href={socialLinks.email}>
-               
-                <ion-icon name="mail"></ion-icon>
+                <i className="fas fa-envelope"></i>
               </a>
             </li>
             <li>
               <a href={socialLinks.website}>
-                <ion-icon name="globe"></ion-icon>
+                <i className="fas fa-globe-europe"></i>
               </a>
             </li>
           </ul>
